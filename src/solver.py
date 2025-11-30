@@ -87,10 +87,16 @@ class Solver:
             logger.info(f"[Solver] Checkpoints will be saved to: {self.save_dir}")
         self.best_loss = float('inf')
 
-        # 7. WandB
+        # 8. WandB
         if cfg.logger.enable:
+            # 将配置转为字典
+            logger_cfg = OmegaConf.to_container(cfg.logger, resolve=True)
+            # 剔除 'enable' 字段，因为它是给 if 判断用的，不是给 wandb.init 用的
+            logger_cfg.pop('enable')
+            
             wandb.init(
-                project=cfg.logger.project,
+                # 使用 **解包，这样 name, tags, group, mode 等所有参数都会自动传进去
+                **logger_cfg, 
                 config=OmegaConf.to_container(cfg, resolve=True)
             )
     
