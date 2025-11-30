@@ -65,7 +65,7 @@ class Opus100Dataset(Dataset):
         ## 用huggingface的datasets里面的load_dataset来加载本地parquet文件
         ## data_files 参数支持直接读取本地文件
         try:
-            dataset_dict = load_dataset("parquet", data_files={'train': parquet_path}, split=split)
+            dataset_dict = load_dataset("parquet", data_files={split: parquet_path}, split=split)
         except Exception as e:
             raise RuntimeError(f"Failed to load parquet file. Error: {e}")
         self.data = dataset_dict

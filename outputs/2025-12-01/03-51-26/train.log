@@ -1,0 +1,143 @@
+[2025-12-01 03:51:26,516][__main__][INFO] - ====== Configuration ======
+[2025-12-01 03:51:26,542][__main__][INFO] - 
+train:
+  seed: 42
+  device: cuda
+  epochs: 5
+checkpoint:
+  enabled: true
+  save_dir: checkpoints
+model:
+  name: seq2seq_transformer
+  wrapper:
+    name: Seq2SeqWrapper
+  shared:
+    src_vocab_size: 21128
+    tgt_vocab_size: 21128
+    d_model: 128
+    pe_cfg:
+      name: SinusoidalPE
+      d_model: 128
+      dropout: 0.1
+      max_len: 5000
+  arch:
+    encoder:
+      name: TransformerEncoder
+      input_dim: 21128
+      d_model: 128
+      nhead: 2
+      num_layers: 2
+      pe_cfg:
+        name: SinusoidalPE
+        d_model: 128
+        dropout: 0.1
+        max_len: 5000
+    decoder:
+      name: TransformerDecoder
+      output_dim: 21128
+      d_model: 128
+      nhead: 2
+      num_layers: 2
+      pe_cfg:
+        name: SinusoidalPE
+        d_model: 128
+        dropout: 0.1
+        max_len: 5000
+dataset:
+  name: Opus100Dataset
+  train_path: /data1/jinyu_wang/projects/transformer-template/data/datasets/opus-100/train/train-00000-of-00001.parquet
+  test_path: /data1/jinyu_wang/projects/transformer-template/data/datasets/opus-100/test/test-00000-of-00001.parquet
+  source_lang: en
+  target_lang: zh
+  tokenizer_path: /data1/jinyu_wang/projects/transformer-template/data/pretrain_models/bert-base-chinese
+  max_samples: 5000
+  seq_len: 64
+  batch_size: 32
+  num_workers: 0
+optimizer:
+  name: AdamW
+  params:
+    lr: 0.0005
+    weight_decay: 0.01
+    betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+criterion:
+  name: CrossEntropyLoss
+  params: {}
+logger:
+  enable: false
+  project: hydra-styple-transformer
+  entity: null
+  name: null
+  group: null
+  tags: []
+  notes: null
+  mode: online
+scheduler:
+  name: CosineAnnealingLR
+  params:
+    T_max: 5
+    eta_min: 1.0e-06
+
+[2025-12-01 03:51:26,553][__main__][INFO] - ===========================
+[2025-12-01 03:51:26,559][__main__][INFO] - Initializing Solver with GPU: 6
+[2025-12-01 03:51:26,618][src.solver][INFO] - Building Train Loader...
+[2025-12-01 03:51:26,619][src.data.datasets][INFO] - [Data] Loading local parquet file: /data1/jinyu_wang/projects/transformer-template/data/datasets/opus-100/train/train-00000-of-00001.parquet...
+[2025-12-01 03:51:28,807][src.data.datasets][INFO] - [Data] Selecting first 5000 samples...
+[2025-12-01 03:51:28,809][src.data.datasets][INFO] - [Data] Loading Tokenizer from: /data1/jinyu_wang/projects/transformer-template/data/pretrain_models/bert-base-chinese...
+[2025-12-01 03:51:28,852][src.solver][INFO] - Building Test Loader...
+[2025-12-01 03:51:28,852][src.data.datasets][INFO] - [Data] Loading local parquet file: /data1/jinyu_wang/projects/transformer-template/data/datasets/opus-100/test/test-00000-of-00001.parquet...
+[2025-12-01 03:51:29,165][src.solver][INFO] - Auto-setting vocab size from Tokenizer: 21128
+[2025-12-01 03:51:29,175][src.models.builders][INFO] - [Builder] Instantiating Encoder: TransformerEncoder
+[2025-12-01 03:51:29,656][src.models.builders][INFO] - [Builder] Instantiating Decoder: TransformerDecoder
+[2025-12-01 03:51:30,191][src.models.builders][INFO] - [Builder] Instantiating Model: Seq2SeqWrapper
+[2025-12-01 03:51:32,241][src.solver][INFO] - [Solver] Checkpoints will be saved to: /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/03-51-26/checkpoints
+[2025-12-01 03:51:32,242][src.solver][INFO] - Start Training Process... Total Epochs: 5
+[2025-12-01 03:51:34,186][src.solver][INFO] - Epoch 0 | Step 0 | Train Loss: 10.1265
+[2025-12-01 03:51:35,855][src.solver][INFO] - Epoch 0 | Step 50 | Train Loss: 6.7414
+[2025-12-01 03:51:37,714][src.solver][INFO] - Epoch 0 | Step 100 | Train Loss: 6.2895
+[2025-12-01 03:51:39,527][src.solver][INFO] - Epoch 0 | Step 150 | Train Loss: 6.2886
+[2025-12-01 03:51:39,741][src.solver][INFO] - === Epoch 0 Summary | Avg Train Loss: 6.8458 ===
+[2025-12-01 03:51:41,473][src.solver][INFO] - === Evaluation Done | Avg Loss: 5.9457 ===
+[2025-12-01 03:51:41,475][src.solver][INFO] - New Best Model Found! (Loss: inf -> 5.9457)
+[2025-12-01 03:51:41,885][src.solver][INFO] - New best checkpoint saved: /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/03-51-26/checkpoints/checkpoint_best.pt
+[2025-12-01 03:51:41,886][src.solver][INFO] - LR updated to: 0.00045235
+[2025-12-01 03:51:41,941][src.solver][INFO] - Epoch 1 | Step 0 | Train Loss: 5.9347
+[2025-12-01 03:51:43,618][src.solver][INFO] - Epoch 1 | Step 50 | Train Loss: 5.3771
+[2025-12-01 03:51:45,333][src.solver][INFO] - Epoch 1 | Step 100 | Train Loss: 5.7342
+[2025-12-01 03:51:47,010][src.solver][INFO] - Epoch 1 | Step 150 | Train Loss: 5.5190
+[2025-12-01 03:51:47,194][src.solver][INFO] - === Epoch 1 Summary | Avg Train Loss: 5.6054 ===
+[2025-12-01 03:51:48,622][src.solver][INFO] - === Evaluation Done | Avg Loss: 5.4004 ===
+[2025-12-01 03:51:48,623][src.solver][INFO] - New Best Model Found! (Loss: 5.9457 -> 5.4004)
+[2025-12-01 03:51:49,978][src.solver][INFO] - New best checkpoint saved: /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/03-51-26/checkpoints/checkpoint_best.pt
+[2025-12-01 03:51:49,979][src.solver][INFO] - LR updated to: 0.00032760
+[2025-12-01 03:51:50,018][src.solver][INFO] - Epoch 2 | Step 0 | Train Loss: 5.4598
+[2025-12-01 03:51:51,760][src.solver][INFO] - Epoch 2 | Step 50 | Train Loss: 4.9787
+[2025-12-01 03:51:53,424][src.solver][INFO] - Epoch 2 | Step 100 | Train Loss: 5.4842
+[2025-12-01 03:51:55,155][src.solver][INFO] - Epoch 2 | Step 150 | Train Loss: 5.3307
+[2025-12-01 03:51:55,336][src.solver][INFO] - === Epoch 2 Summary | Avg Train Loss: 5.1469 ===
+[2025-12-01 03:51:56,804][src.solver][INFO] - === Evaluation Done | Avg Loss: 5.1277 ===
+[2025-12-01 03:51:56,805][src.solver][INFO] - New Best Model Found! (Loss: 5.4004 -> 5.1277)
+[2025-12-01 03:51:57,878][src.solver][INFO] - New best checkpoint saved: /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/03-51-26/checkpoints/checkpoint_best.pt
+[2025-12-01 03:51:57,879][src.solver][INFO] - LR updated to: 0.00017340
+[2025-12-01 03:51:57,916][src.solver][INFO] - Epoch 3 | Step 0 | Train Loss: 4.7454
+[2025-12-01 03:51:59,630][src.solver][INFO] - Epoch 3 | Step 50 | Train Loss: 4.5568
+[2025-12-01 03:52:01,399][src.solver][INFO] - Epoch 3 | Step 100 | Train Loss: 4.9909
+[2025-12-01 03:52:03,206][src.solver][INFO] - Epoch 3 | Step 150 | Train Loss: 4.8823
+[2025-12-01 03:52:03,389][src.solver][INFO] - === Epoch 3 Summary | Avg Train Loss: 4.8823 ===
+[2025-12-01 03:52:05,076][src.solver][INFO] - === Evaluation Done | Avg Loss: 5.0063 ===
+[2025-12-01 03:52:05,077][src.solver][INFO] - New Best Model Found! (Loss: 5.1277 -> 5.0063)
+[2025-12-01 03:52:06,343][src.solver][INFO] - New best checkpoint saved: /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/03-51-26/checkpoints/checkpoint_best.pt
+[2025-12-01 03:52:06,344][src.solver][INFO] - LR updated to: 0.00004865
+[2025-12-01 03:52:06,382][src.solver][INFO] - Epoch 4 | Step 0 | Train Loss: 4.7688
+[2025-12-01 03:52:08,049][src.solver][INFO] - Epoch 4 | Step 50 | Train Loss: 4.6820
+[2025-12-01 03:52:09,698][src.solver][INFO] - Epoch 4 | Step 100 | Train Loss: 4.7106
+[2025-12-01 03:52:11,447][src.solver][INFO] - Epoch 4 | Step 150 | Train Loss: 4.5448
+[2025-12-01 03:52:11,629][src.solver][INFO] - === Epoch 4 Summary | Avg Train Loss: 4.7655 ===
+[2025-12-01 03:52:13,154][src.solver][INFO] - === Evaluation Done | Avg Loss: 4.9599 ===
+[2025-12-01 03:52:13,155][src.solver][INFO] - New Best Model Found! (Loss: 5.0063 -> 4.9599)
+[2025-12-01 03:52:14,479][src.solver][INFO] - New best checkpoint saved: /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/03-51-26/checkpoints/checkpoint_best.pt
+[2025-12-01 03:52:14,479][src.solver][INFO] - LR updated to: 0.00000100
+[2025-12-01 03:52:14,480][src.solver][INFO] - Training Finished.

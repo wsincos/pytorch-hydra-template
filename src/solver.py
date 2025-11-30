@@ -34,24 +34,29 @@ from hydra.core.hydra_config import HydraConfig
 from src.models.builders import get_model
 from src.utils.common import register_standard_components, seed_everything
 from src.data.datasets import get_dataloader
-from utils.registry import OPTIMIZER_REGISTRY, CRITERION_REGISTRY
+from src.utils.registry import OPTIMIZER_REGISTRY, CRITERION_REGISTRY, SCHEDULER_REGISTRY
 
 logger = logging.getLogger(__name__)
 
 class Solver:
     def __init__(self, cfg):
         self.cfg = cfg
-        seed_everything(cfg.seed)
+        seed_everything(cfg.train.seed)
         register_standard_components()
         self.device = torch.device(cfg.train.device)
 
         # 1. 构建数据
-        self.dataloader = get_dataloader(cfg)
+        logger.info("Building Train Loader...")
+        self.train_loader = get_dataloader(cfg, split='train')
+        
+        logger.info("Building Test Loader...")
+        self.test_loader = get_dataloader(cfg, split='test')
 
         # 2. 自动调整模型词表大小 (适配 BERT)
-        if hasattr(self.dataloader.dataset, 'get_vocab_size'):
-            vocab_size = self.dataloader.dataset.get_vocab_size()
-            logger.info(f"[Solver] Auto-setting vocab size to: {vocab_size}")
+        if hasattr(self.train_loader.dataset, 'get_vocab_size'):
+            vocab_size = self.train_loader.dataset.get_vocab_size()
+            logger.info(f"Auto-setting vocab size from Tokenizer: {vocab_size}")
+            
             cfg.model.shared.src_vocab_size = vocab_size
             cfg.model.shared.tgt_vocab_size = vocab_size
         
@@ -68,7 +73,7 @@ class Solver:
         self.criterion = loss_cls(ignore_index=0, **cfg.criterion.params)
 
         # 6. 构建 Scheduler
-        scheduler_cls = OPTIMIZER_REGISTRY.get(cfg.scheduler.name)
+        scheduler_cls = SCHEDULER_REGISTRY.get(cfg.scheduler.name)
         self.scheduler = scheduler_cls(self.optimizer, **cfg.scheduler.params)
 
         # 7. 初始化 Checkpoint 目录
@@ -149,12 +154,12 @@ class Solver:
         else:
             logger.info(f"Checkpoint saved: {last_path}")
     
-
+    @torch.no_grad()
     def evaluate(self):
         self.model.eval()
         total_loss = 0
         with torch.no_grad():
-            for i, (x, y) in enumerate(self.dataloader):
+            for i, (x, y) in enumerate(self.test_loader):
                 x, y = x.to(self.device), y.to(self.device)
                 
                 tgt_input = y[:, :-1]
@@ -165,7 +170,7 @@ class Solver:
                 loss = self.criterion(logits.reshape(-1, logits.shape[-1]), tgt_label.reshape(-1))
                 total_loss += loss.item()
         
-        avg_loss = total_loss / len(self.dataloader)
+        avg_loss = total_loss / len(self.test_loader)
         logger.info(f"=== Evaluation Done | Avg Loss: {avg_loss:.4f} ===")
         
         self.model.train()

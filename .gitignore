@@ -7,3 +7,5 @@ data/datasets/*
 
 data/pretrained_models/*
 !data/pretrained_models/.gitkeep
+
+*.pt

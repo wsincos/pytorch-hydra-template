@@ -6,7 +6,7 @@ import math
 import torch
 import torch.nn as nn
 
-from utils.registry import LAYER_REGISTRY
+from src.utils.registry import LAYER_REGISTRY
 
 @LAYER_REGISTRY.register()
 class SinusoidalPE(nn.Module):

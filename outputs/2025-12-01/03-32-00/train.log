@@ -1,0 +1,77 @@
+[2025-12-01 03:32:00,439][__main__][INFO] - ====== Configuration ======
+[2025-12-01 03:32:00,451][__main__][INFO] - 
+train:
+  seed: 42
+  device: cuda
+  epochs: 5
+checkpoint:
+  enabled: true
+  save_dir: checkpoints
+model:
+  name: seq2seq_transformer
+  wrapper:
+    name: Seq2SeqWrapper
+  shared:
+    src_vocab_size: 21128
+    tgt_vocab_size: 21128
+    d_model: 128
+    pe_cfg:
+      name: SinusoidalPE
+      dropout: 0.1
+      max_len: 5000
+  arch:
+    encoder:
+      name: TransformerEncoder
+      input_dim: 21128
+      d_model: 128
+      nhead: 2
+      num_layers: 2
+      pe_cfg:
+        name: SinusoidalPE
+        dropout: 0.1
+        max_len: 5000
+    decoder:
+      name: TransformerDecoder
+      output_dim: 21128
+      d_model: 128
+      nhead: 2
+      num_layers: 2
+      pe_cfg:
+        name: SinusoidalPE
+        dropout: 0.1
+        max_len: 5000
+dataset:
+  name: Opus100Dataset
+  train_path: /data1/jinyu_wang/projects/transformer-template/data/datasets/opus-100/train/train-00000-of-00001.parquet
+  test_path: /data1/jinyu_wang/projects/transformer-template/data/datasets/opus-100/test/test-00000-of-00001.parquet
+  source_lang: en
+  target_lang: zh
+  tokenizer_path: /data1/jinyu_wang/projects/transformer-template/data/pretrain_models/bert-base-chinese
+  max_samples: 5000
+  seq_len: 64
+  batch_size: 32
+  num_workers: 0
+optimizer:
+  name: AdamW
+  params:
+    lr: 0.0005
+    weight_decay: 0.01
+    betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+criterion:
+  name: CrossEntropyLoss
+  params: {}
+logger:
+  enable: true
+  project: hydra-styple-transformer
+  entity: null
+  name: null
+  group: null
+  tags: []
+  notes: null
+  mode: online
+
+[2025-12-01 03:32:00,459][__main__][INFO] - ===========================
+[2025-12-01 03:32:00,460][__main__][INFO] - Initializing Solver with GPU: 6

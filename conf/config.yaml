@@ -5,6 +5,7 @@ defaults:
   - optimizer: adamw       # 加载 conf/optimizer/adamw.yaml
   - criterion: ce          # 加载 conf/criterion/ce.yaml
   - logger: wandb          # 加载 conf/logger/wandb.yaml
+  - scheduler: cosine
 
 train:
   seed: 42

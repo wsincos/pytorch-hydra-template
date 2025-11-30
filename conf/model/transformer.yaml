@@ -11,6 +11,7 @@ shared:
   d_model: 128
   pe_cfg:
     name: SinusoidalPE
+    d_model: ${model.shared.d_model}
     dropout: 0.1
     max_len: 5000
 
