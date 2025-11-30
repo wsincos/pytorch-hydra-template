@@ -1,3 +1,7 @@
+"""
+Layers.py 存放一些'原子'的神经网络层组件, 例如各种位置编码模块等.
+"""
+
 import math
 import torch
 import torch.nn as nn
