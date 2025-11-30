@@ -1,0 +1,33 @@
+# 对应 src/model/builders.py 里的判断逻辑
+name: seq2seq_transformer
+
+wrapper:
+  name: Seq2SeqWrapper
+
+shared:
+  # 这里的vocab_size只是为了占位，实际会被Tokenizer中真实词表覆盖
+  src_vocab_size: 21128
+  tgt_vocab_size: 21128
+  d_model: 128
+  pe_cfg:
+    name: SinusoidalPE
+    dropout: 0.1
+    max_len: 5000
+
+arch:
+  encoder:
+    name: TransformerEncoder
+    input_dim: ${model.shared.src_vocab_size}
+    d_model: ${model.shared.d_model}
+    nhead: 2
+    num_layers: 2
+    pe_cfg: ${model.shared.pe_cfg}
+
+  
+  decoder:
+    name: TransformerDecoder
+    output_dim: ${model.shared.tgt_vocab_size}
+    d_model: ${model.shared.d_model}
+    nhead: 2
+    num_layers: 2
+    pe_cfg: ${model.shared.pe_cfg}

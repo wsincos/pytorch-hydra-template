@@ -38,7 +38,7 @@ class Registry:
         self._name = name
         self._obj_map = {}
 
-    def registrer(self, name=None):
+    def register(self, name=None):
         def _register(obj):
             key = name if name else obj.__name__
             if key in self._obj_map:
@@ -58,6 +58,7 @@ class Registry:
 MODEL_REGISTRY = Registry("MODEL")         # 顶层Wrapper
 ENCODER_REGISTRY = Registry("ENCODER")     # 编码器
 DECODER_REGISTRY = Registry("DECODER")     # 解码器
+LAYER_REGISTRY = Registry("LAYER")         # 网络层
 
 # === 2. 数据相关 ===
 DATASET_REGISTRY = Registry("DATASET")     # 数据集

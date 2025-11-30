@@ -53,6 +53,7 @@ import torch.nn as nn
 import torch.optim as optim
 import random
 import numpy as np
+import omegaconf
 from .registry import OPTIMIZER_REGISTRY, CRITERION_REGISTRY, SCHEDULER_REGISTRY
 
 
@@ -65,6 +66,11 @@ def seed_everything(seed):
         # torch.backends.cudnn.deterministic = True
         # torch.backends.cudnn.benchmark = False
 
+def dict_from_config(cfg: omegaconf.DictConfig) -> dict:
+    """将配置对象转换为普通字典，方便传递参数"""
+    # to_container: 将 OmegaConf 对象转换为原生 Python 对象
+    # resolve=True: 解析所有的引用和插值，确保返回的字典中不包含任何 OmegaConf 特有的结构
+    return omegaconf.OmegaConf.to_container(cfg, resolve=True)
 
 def register_standard_components():
     # optimizers
