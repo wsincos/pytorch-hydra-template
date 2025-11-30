@@ -1,0 +1,4 @@
+name: CosineAnnealingLR
+params:
+  T_max: ${train.epochs}      # 通常设为总 epoch 数
+  eta_min: 1e-6  # 最小学习率

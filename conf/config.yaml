@@ -1,0 +1,17 @@
+defaults:
+  - _self_                 # 加载当前文件的配置
+  - model: transformer     # 加载 conf/model/transformer.yaml
+  - dataset: opus_enzh     # 加载 conf/dataset/opus_enzh.yaml
+  - optimizer: adamw       # 加载 conf/optimizer/adamw.yaml
+  - criterion: ce          # 加载 conf/criterion/ce.yaml
+  - logger: wandb          # 加载 conf/logger/wandb.yaml
+
+train:
+  seed: 42
+  device: cuda             # 环境支持 CUDA，直接用显卡跑
+  epochs: 5                # 跑 5 轮试试水
+
+
+checkpoint:
+  enabled: true
+  save_dir: "checkpoints"
