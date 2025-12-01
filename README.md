@@ -448,3 +448,9 @@ Callback 是什么：是插入到主程序流程中的**“钩子（Hooks）”�
 
 ## 6. train.py
 `train.py` 负责实例化`hydra`与`solver`
+
+## Appendix
+for test：
+```
+CUDA_VISIBLE_DEVICES=7 python train.py train.epochs=3 dataset.max_samples=500 logger.name="test_run_01" callback.training_monitor.params.log_every_n_steps=50 dataset.batch_size=32
+```
