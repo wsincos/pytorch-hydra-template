@@ -10,9 +10,21 @@ defaults:
 train:
   seed: 42
   device: cuda             # 环境支持 CUDA，直接用显卡跑
-  epochs: 5                # 跑 5 轮试试水
+  epochs: 20               # 15-20轮即可
 
 
 checkpoint:
   enabled: true
   save_dir: "checkpoints"
+
+
+hydra:
+  job:
+      chdir: false        # 不改变工作目录，保持在运行脚本的目录
+  job_logging:
+    formatters:
+      simple:
+        # 默认是: "[%(asctime)s][%(name)s][%(levelname)s] - %(message)s"
+        # 我们删掉 [%(asctime)s] 即可
+        format: "[%(name)s][%(levelname)s] - %(message)s"
+  

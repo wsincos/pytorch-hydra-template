@@ -31,7 +31,8 @@ def get_tokenizer(model_path=None):
     
     if model_path is None:
         model_path = "google-bert/bert-base-chinese"
-    
+    # else:
+    #     model_path = os.path.abspath(model_path)
     logger.info(f"[Data] Loading Tokenizer from: {model_path}...")
     try:
         _tokenizer = AutoTokenizer.from_pretrained(model_path)
@@ -78,7 +79,7 @@ class Opus100Dataset(Dataset):
         #     raise RuntimeError(f"Failed to load parquet file using Pandas. Error: {e}")
         # self.data = df.to_dict('records')
 
-
+        print(f"Loaded {len(self.data)} samples from {parquet_path}")
 
         # 3. 限制数据量（用于快速测试）
         if split == 'train' and cfg.dataset.max_samples > 0:

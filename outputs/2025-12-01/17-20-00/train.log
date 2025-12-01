@@ -1,0 +1,161 @@
+[__main__][INFO] - ====== Configuration ======
+[__main__][INFO] - 
+train:
+  seed: 42
+  device: cuda
+  epochs: 20
+checkpoint:
+  enabled: true
+  save_dir: checkpoints
+model:
+  name: seq2seq_transformer
+  wrapper:
+    name: Seq2SeqWrapper
+  shared:
+    src_vocab_size: 21128
+    tgt_vocab_size: 21128
+    d_model: 512
+    pe_cfg:
+      name: SinusoidalPE
+      d_model: 512
+      dropout: 0.1
+      max_len: 5000
+  arch:
+    encoder:
+      name: TransformerEncoder
+      input_dim: 21128
+      d_model: 512
+      nhead: 8
+      num_layers: 6
+      pe_cfg:
+        name: SinusoidalPE
+        d_model: 512
+        dropout: 0.1
+        max_len: 5000
+    decoder:
+      name: TransformerDecoder
+      output_dim: 21128
+      d_model: 512
+      nhead: 8
+      num_layers: 6
+      pe_cfg:
+        name: SinusoidalPE
+        d_model: 512
+        dropout: 0.1
+        max_len: 5000
+dataset:
+  name: Opus100Dataset
+  train_path: ./data/datasets/opus-100/train/train-00000-of-00001.parquet
+  test_path: ./data/datasets/opus-100/test/test-00000-of-00001.parquet
+  source_lang: en
+  target_lang: zh
+  tokenizer_path: ./data/pretrained_models/bert-base-chinese
+  max_samples: -1
+  seq_len: 128
+  batch_size: 128
+  num_workers: 8
+optimizer:
+  name: AdamW
+  params:
+    lr: 0.0005
+    weight_decay: 0.01
+    betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+criterion:
+  name: CrossEntropyLoss
+  params: {}
+logger:
+  enable: true
+  project: hydra-styple-transformer
+  entity: null
+  name: full-run-1
+  group: null
+  tags: []
+  notes: null
+  mode: online
+scheduler:
+  name: CosineAnnealingLR
+  params:
+    T_max: 20
+    eta_min: 1.0e-06
+
+[__main__][INFO] - ===========================
+[__main__][INFO] - Initializing Solver with GPU: 6
+[src.solver][INFO] - Building Train Loader...
+[src.data.datasets][INFO] - [Data] Loading local parquet file: ./data/datasets/opus-100/train/train-00000-of-00001.parquet...
+[src.data.datasets][INFO] - [Data] Loading Tokenizer from: ./data/pretrained_models/bert-base-chinese...
+[src.solver][INFO] - Building Test Loader...
+[src.data.datasets][INFO] - [Data] Loading local parquet file: ./data/datasets/opus-100/test/test-00000-of-00001.parquet...
+[src.solver][INFO] - Auto-setting vocab size from Tokenizer: 21128
+[src.models.builders][INFO] - [Builder] Instantiating Encoder: TransformerEncoder
+[src.models.builders][INFO] - [Builder] Instantiating Decoder: TransformerDecoder
+[src.models.builders][INFO] - [Builder] Instantiating Model: Seq2SeqWrapper
+[src.solver][INFO] - [Solver] Checkpoints will be saved to: /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/17-20-00/checkpoints
+[src.solver][INFO] - Start Training Process... Total Epochs: 20
+[src.solver][INFO] - Epoch 0 | Step 0 | Train Loss: 10.1345
+[src.solver][INFO] - Epoch 0 | Step 50 | Train Loss: 6.4105
+[src.solver][INFO] - Epoch 0 | Step 100 | Train Loss: 6.5994
+[src.solver][INFO] - Epoch 0 | Step 150 | Train Loss: 6.4485
+[src.solver][INFO] - Epoch 0 | Step 200 | Train Loss: 6.6081
+[src.solver][INFO] - Epoch 0 | Step 250 | Train Loss: 6.3811
+[src.solver][INFO] - Epoch 0 | Step 300 | Train Loss: 6.4693
+[src.solver][INFO] - Epoch 0 | Step 350 | Train Loss: 6.4107
+[src.solver][INFO] - Epoch 0 | Step 400 | Train Loss: 6.4647
+[src.solver][INFO] - Epoch 0 | Step 450 | Train Loss: 6.5303
+[src.solver][INFO] - Epoch 0 | Step 500 | Train Loss: 6.4829
+[src.solver][INFO] - Epoch 0 | Step 550 | Train Loss: 6.4942
+[src.solver][INFO] - Epoch 0 | Step 600 | Train Loss: 6.4723
+[src.solver][INFO] - Epoch 0 | Step 650 | Train Loss: 6.4782
+[src.solver][INFO] - Epoch 0 | Step 700 | Train Loss: 6.4892
+[src.solver][INFO] - Epoch 0 | Step 750 | Train Loss: 6.4853
+[src.solver][INFO] - Epoch 0 | Step 800 | Train Loss: 6.4480
+[src.solver][INFO] - Epoch 0 | Step 850 | Train Loss: 6.4557
+[src.solver][INFO] - Epoch 0 | Step 900 | Train Loss: 6.4391
+[src.solver][INFO] - Epoch 0 | Step 950 | Train Loss: 6.4262
+[src.solver][INFO] - Epoch 0 | Step 1000 | Train Loss: 6.4788
+[src.solver][INFO] - Epoch 0 | Step 1050 | Train Loss: 6.4578
+[src.solver][INFO] - Epoch 0 | Step 1100 | Train Loss: 6.4460
+[src.solver][INFO] - Epoch 0 | Step 1150 | Train Loss: 6.4441
+[src.solver][INFO] - Epoch 0 | Step 1200 | Train Loss: 6.4266
+[src.solver][INFO] - Epoch 0 | Step 1250 | Train Loss: 6.5344
+[src.solver][INFO] - Epoch 0 | Step 1300 | Train Loss: 6.4868
+[src.solver][INFO] - Epoch 0 | Step 1350 | Train Loss: 6.4298
+[src.solver][INFO] - Epoch 0 | Step 1400 | Train Loss: 6.4050
+[src.solver][INFO] - Epoch 0 | Step 1450 | Train Loss: 6.4033
+[src.solver][INFO] - Epoch 0 | Step 1500 | Train Loss: 6.3716
+[src.solver][INFO] - Epoch 0 | Step 1550 | Train Loss: 6.4428
+[src.solver][INFO] - Epoch 0 | Step 1600 | Train Loss: 6.4404
+[src.solver][INFO] - Epoch 0 | Step 1650 | Train Loss: 6.3715
+[src.solver][INFO] - Epoch 0 | Step 1700 | Train Loss: 6.4845
+[src.solver][INFO] - Epoch 0 | Step 1750 | Train Loss: 6.5035
+[src.solver][INFO] - Epoch 0 | Step 1800 | Train Loss: 6.4524
+[src.solver][INFO] - Epoch 0 | Step 1850 | Train Loss: 6.5329
+[src.solver][INFO] - Epoch 0 | Step 1900 | Train Loss: 6.4890
+[src.solver][INFO] - Epoch 0 | Step 1950 | Train Loss: 6.5051
+[src.solver][INFO] - Epoch 0 | Step 2000 | Train Loss: 6.4954
+[src.solver][INFO] - Epoch 0 | Step 2050 | Train Loss: 6.5416
+[src.solver][INFO] - Epoch 0 | Step 2100 | Train Loss: 6.4904
+[src.solver][INFO] - Epoch 0 | Step 2150 | Train Loss: 6.4499
+[src.solver][INFO] - Epoch 0 | Step 2200 | Train Loss: 6.4889
+[src.solver][INFO] - Epoch 0 | Step 2250 | Train Loss: 6.4382
+[src.solver][INFO] - Epoch 0 | Step 2300 | Train Loss: 6.4553
+[src.solver][INFO] - Epoch 0 | Step 2350 | Train Loss: 6.3842
+[src.solver][INFO] - Epoch 0 | Step 2400 | Train Loss: 6.4259
+[src.solver][INFO] - Epoch 0 | Step 2450 | Train Loss: 6.4891
+[src.solver][INFO] - Epoch 0 | Step 2500 | Train Loss: 6.4785
+[src.solver][INFO] - Epoch 0 | Step 2550 | Train Loss: 6.4747
+[src.solver][INFO] - Epoch 0 | Step 2600 | Train Loss: 6.3857
+[src.solver][INFO] - Epoch 0 | Step 2650 | Train Loss: 6.5077
+[src.solver][INFO] - Epoch 0 | Step 2700 | Train Loss: 6.4414
+[src.solver][INFO] - Epoch 0 | Step 2750 | Train Loss: 6.4200
+[src.solver][INFO] - Epoch 0 | Step 2800 | Train Loss: 6.4756
+[src.solver][INFO] - Epoch 0 | Step 2850 | Train Loss: 6.3828
+[src.solver][INFO] - Epoch 0 | Step 2900 | Train Loss: 6.5325
+[src.solver][INFO] - Epoch 0 | Step 2950 | Train Loss: 6.5381
+[src.solver][INFO] - Epoch 0 | Step 3000 | Train Loss: 6.4322
+[src.solver][INFO] - Epoch 0 | Step 3050 | Train Loss: 6.5695
+[src.solver][INFO] - Epoch 0 | Step 3100 | Train Loss: 6.4477
+[src.solver][INFO] - Epoch 0 | Step 3150 | Train Loss: 6.4193
+[src.solver][INFO] - Epoch 0 | Step 3200 | Train Loss: 6.5398

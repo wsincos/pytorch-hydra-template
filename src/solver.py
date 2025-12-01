@@ -84,24 +84,25 @@ class Solver:
             except Exception:
                 # 兜底：如果不是通过 hydra 启动（比如 debug），就存到当前目录
                 run_dir = "."
-            
+            self.run_dir = run_dir
             # 2. 拼接路径： outputs/.../checkpoints
-            self.save_dir = os.path.join(run_dir, cfg.checkpoint.save_dir)
+            self.ckpt_save_dir = os.path.join(run_dir, cfg.checkpoint.save_dir)
             
-            os.makedirs(self.save_dir, exist_ok=True)
-            logger.info(f"[Solver] Checkpoints will be saved to: {self.save_dir}")
+            os.makedirs(self.ckpt_save_dir, exist_ok=True)
+            logger.info(f"[Solver] Checkpoints will be saved to: {self.ckpt_save_dir}")
         self.best_loss = float('inf')
 
         # 8. WandB
         if cfg.logger.enable:
-            # 将配置转为字典
-            logger_cfg = OmegaConf.to_container(cfg.logger, resolve=True)
-            # 剔除 'enable' 字段，因为它是给 if 判断用的，不是给 wandb.init 用的
-            logger_cfg.pop('enable')
+            # 转换配置为字典
+            wandb_cfg = OmegaConf.to_container(cfg.logger, resolve=True)
+            wandb_cfg.pop('enable') # 移除 enable 字段
             
             wandb.init(
-                # 使用 **解包，这样 name, tags, group, mode 等所有参数都会自动传进去
-                **logger_cfg, 
+                # 显式指定 WandB 的存储目录为 Hydra 的输出目录
+                # self.run_dir 我们在 __init__ 开头已经获取过了
+                dir=self.run_dir, 
+                **wandb_cfg, # 传入 project, entity, tags 等
                 config=OmegaConf.to_container(cfg, resolve=True)
             )
     
@@ -138,7 +139,7 @@ class Solver:
         }
         
         # 1. 始终覆盖保存 last.pt (用于恢复)
-        last_path = os.path.join(self.save_dir, "checkpoint_last.pt")
+        last_path = os.path.join(self.ckpt_save_dir, "checkpoint_last.pt")
         torch.save(state, last_path)
 
         # 记录 Epoch 存档 (可选)
@@ -148,7 +149,7 @@ class Solver:
         
         # 2. 如果是最佳模型，额外保存 best.pt (用于推理)
         if is_best:
-            best_path = os.path.join(self.save_dir, "checkpoint_best.pt")
+            best_path = os.path.join(self.ckpt_save_dir, "checkpoint_best.pt")
             torch.save(state, best_path)
             logger.info(f"New best checkpoint saved: {best_path}")
         else:
@@ -188,7 +189,7 @@ class Solver:
                 loss = self.run_step(x, y)
                 total_loss += loss
                 
-                if i % 50 == 0:
+                if i % 100000 == 0:
                     logger.info(f"Epoch {epoch} | Step {i} | Train Loss: {loss:.4f}")
                     if self.cfg.logger.enable:
                         wandb.log({"train/step_loss": loss})

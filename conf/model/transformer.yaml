@@ -8,7 +8,7 @@ shared:
   # 这里的vocab_size只是为了占位，实际会被Tokenizer中真实词表覆盖
   src_vocab_size: 21128
   tgt_vocab_size: 21128
-  d_model: 128
+  d_model: 512  # 标准宽度。128 太窄，表达能力不够；512 是平衡点。
   pe_cfg:
     name: SinusoidalPE
     d_model: ${model.shared.d_model}
@@ -20,8 +20,8 @@ arch:
     name: TransformerEncoder
     input_dim: ${model.shared.src_vocab_size}
     d_model: ${model.shared.d_model}
-    nhead: 2
-    num_layers: 2
+    nhead: 8
+    num_layers: 6
     pe_cfg: ${model.shared.pe_cfg}
 
   
@@ -29,6 +29,6 @@ arch:
     name: TransformerDecoder
     output_dim: ${model.shared.tgt_vocab_size}
     d_model: ${model.shared.d_model}
-    nhead: 2
-    num_layers: 2
+    nhead: 8
+    num_layers: 6
     pe_cfg: ${model.shared.pe_cfg}

@@ -1,15 +1,14 @@
 name: Opus100Dataset
 
-train_path: "/data1/jinyu_wang/projects/transformer-template/data/datasets/opus-100/train/train-00000-of-00001.parquet"
-test_path: "/data1/jinyu_wang/projects/transformer-template/data/datasets/opus-100/test/test-00000-of-00001.parquet"
+train_path: "./data/datasets/opus-100/train/train-00000-of-00001.parquet"
+test_path: "./data/datasets/opus-100/test/test-00000-of-00001.parquet"
 
 source_lang: "en"
 target_lang: "zh"
 
-tokenizer_path: "/data1/jinyu_wang/projects/transformer-template/data/pretrain_models/bert-base-chinese"
-
+tokenizer_path: "./data/pretrained_models/bert-base-chinese"
 # 实验参数
-max_samples: 5000  # 先跑 5000 条测试，稳定后可以改为 -1 (跑全量)
-seq_len: 64
-batch_size: 32     
-num_workers: 0
+max_samples: -1  # 先跑 5000 条测试，稳定后可以改为 -1 (跑全量)
+seq_len: 128
+batch_size: 128
+num_workers: 8
