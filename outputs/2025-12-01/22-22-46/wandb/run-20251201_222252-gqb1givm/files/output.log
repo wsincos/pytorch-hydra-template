@@ -1,0 +1,17 @@
+[src.solver][INFO] - Start Training... Total Epochs: 3
+[src.solver][INFO] - === Epoch 0 Done | Train Loss: 8.0785 ===
+[src.callbacks.checkpoint][INFO] - New Best Model! Loss: inf -> 7.0368
+[src.callbacks.checkpoint][INFO] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/22-22-46/checkpoints/checkpoint_best.pt
+Error executing job with overrides: ['train.epochs=3', 'dataset.max_samples=500', 'logger.name=test_run_01', 'callback.training_monitor.params.log_every_n_steps=50', 'dataset.batch_size=32']
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 32, in main
+    solver.train()
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 209, in train
+    self.trigger_callbacks("on_epoch_end")
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 129, in trigger_callbacks
+    getattr(cb, hook_name)(self)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/callbacks/training_monitor.py", line 22, in on_epoch_end
+    if self.cfg.logger.enable:
+AttributeError: 'TrainingMonitorCallback' object has no attribute 'cfg'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

@@ -1,0 +1,14 @@
+[src.solver][INFO] - Start Training... Total Epochs: 3
+[src.solver][INFO] - === Epoch 0 Done | Train Loss: 8.0785 ===
+[src.callbacks.checkpoint][INFO] - New Best Model! Loss: inf -> 7.0368
+[src.callbacks.checkpoint][INFO] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/22-23-56/checkpoints/checkpoint_best.pt
+[src.solver][INFO] - LR updated to: 0.00037525
+[src.solver][INFO] - === Epoch 1 Done | Train Loss: 6.4183 ===
+[src.callbacks.checkpoint][INFO] - New Best Model! Loss: 7.0368 -> 6.8870
+[src.callbacks.checkpoint][INFO] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/22-23-56/checkpoints/checkpoint_best.pt
+[src.solver][INFO] - LR updated to: 0.00012575
+[src.solver][INFO] - === Epoch 2 Done | Train Loss: 6.2287 ===
+[src.callbacks.checkpoint][INFO] - New Best Model! Loss: 6.8870 -> 6.7992
+[src.callbacks.checkpoint][INFO] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/22-23-56/checkpoints/checkpoint_best.pt
+[src.solver][INFO] - LR updated to: 0.00000100
+[src.solver][INFO] - Training Finished.

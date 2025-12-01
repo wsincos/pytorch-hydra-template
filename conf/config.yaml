@@ -5,6 +5,7 @@ defaults:
   - optimizer: adamw       # 加载 conf/optimizer/adamw.yaml
   - criterion: ce          # 加载 conf/criterion/ce.yaml
   - logger: wandb          # 加载 conf/logger/wandb.yaml
+  - callback: default      # 加载 conf/callback/default.yaml
   - scheduler: cosine
 
 train:
@@ -27,4 +28,6 @@ hydra:
         # 默认是: "[%(asctime)s][%(name)s][%(levelname)s] - %(message)s"
         # 我们删掉 [%(asctime)s] 即可
         format: "[%(name)s][%(levelname)s] - %(message)s"
-  
+  # 我想重命名输出目录
+  # run:
+  #   dir: ./outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}_${hydra.job.num} # default

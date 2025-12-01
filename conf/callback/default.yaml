@@ -1,0 +1,21 @@
+# 1. 自动保存模型
+ckpt:
+  name: CheckpointCallback
+  params:
+    save_every: 1
+    keep_last: true
+    # save_dir 会由 Solver 自动注入
+
+# 2. 早停
+early_stop:
+  name: EarlyStopping
+  params:
+    patience: 3      # 3 次不下降就停
+    min_delta: 0.001
+
+
+# 3. Monitor 监控指标
+training_monitor:
+  name: TrainingMonitor
+  params:
+    log_every_n_steps: 100000

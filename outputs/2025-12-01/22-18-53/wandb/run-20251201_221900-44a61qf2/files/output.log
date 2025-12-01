@@ -1,0 +1,38 @@
+[src.solver][INFO] - Start Training... Total Epochs: 3
+Error executing job with overrides: ['train.epochs=3', 'dataset.max_samples=500', 'logger.name=test_run_01', 'callback.training_monitor.params.log_every_n_steps=50']
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 32, in main
+    solver.train()
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 180, in train
+    loss = self.run_step(x, y)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 135, in run_step
+    logits = self.model(x, tgt_input)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/models/modules/wrappers.py", line 12, in forward
+    memory = self.encoder(src)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/models/modules/encoders.py", line 25, in forward
+    return self.model(x)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/transformer.py", line 315, in forward
+    output = mod(output, src_mask=mask, is_causal=is_causal, src_key_padding_mask=src_key_padding_mask_for_layers)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/transformer.py", line 591, in forward
+    x = self.norm1(x + self._sa_block(x, src_mask, src_key_padding_mask, is_causal=is_causal))
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/transformer.py", line 599, in _sa_block
+    x = self.self_attn(x, x, x,
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/activation.py", line 1205, in forward
+    attn_output, attn_output_weights = F.multi_head_attention_forward(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/functional.py", line 5224, in multi_head_attention_forward
+    q, k, v = _in_projection_packed(query, key, value, in_proj_weight, in_proj_bias)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/functional.py", line 4765, in _in_projection_packed
+    proj = linear(q, w, b)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 96.00 MiB (GPU 0; 23.70 GiB total capacity; 1.93 GiB already allocated; 47.81 MiB free; 1.98 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

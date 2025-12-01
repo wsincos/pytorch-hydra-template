@@ -1,0 +1,8 @@
+{"time":"2025-12-01T18:17:00.471630333+08:00","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2025-12-01T18:17:01.796161674+08:00","level":"INFO","msg":"stream: created new stream","id":"jil0oug3"}
+{"time":"2025-12-01T18:17:01.796299601+08:00","level":"INFO","msg":"handler: started","stream_id":"jil0oug3"}
+{"time":"2025-12-01T18:17:01.796507617+08:00","level":"INFO","msg":"stream: started","id":"jil0oug3"}
+{"time":"2025-12-01T18:17:01.796552838+08:00","level":"INFO","msg":"sender: started","stream_id":"jil0oug3"}
+{"time":"2025-12-01T18:17:01.796554521+08:00","level":"INFO","msg":"writer: started","stream_id":"jil0oug3"}
+{"time":"2025-12-01T19:42:30.200926747+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/wsincos1025/hydra-styple-transformer/jil0oug3/file_stream\": read tcp 10.208.40.40:51010->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-12-01T21:55:15.559298154+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/wsincos1025/hydra-styple-transformer/jil0oug3/file_stream\": unexpected EOF"}

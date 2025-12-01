@@ -4,9 +4,9 @@ project: "hydra-styple-transformer"  # 在 WandB 网页上显示的项目名称
 entity: null                     # 你的用户名或团队名 (留空 null 则默认为当前登录用户)
 
 
-name: "full-run-1"                       # 本次 Run 的名称 (留空则由 WandB 随机生成，如 "glorious-capybara-1")
+name: "experiment_v1"                       # 本次 Run 的名称 (留空则由 WandB 随机生成，如 "glorious-capybara-1")
 group: null                      # 实验分组 (非常有用！例如填 "baseline" 或 "ablation_layers")
-tags: []                         # 标签列表 (例如 ["zh-en", "transformer", "v1"])
+tags: ["opus", "transformer"]                         # 标签列表 (例如 ["zh-en", "transformer", "v1"])
 notes: null                      # 实验的详细备注/描述
 
 # === 运行模式 (Mode) ===

@@ -427,6 +427,19 @@ def get_dataloader(cfg, split):
 -   保存模型state
 -   日志保存
 
+### 5.1 callback
+Callback 是什么：是插入到主程序流程中的**“钩子（Hooks）”或“插件（Plugins）”**。
+
+如何理解：它是**“事件驱动”**的。当 Solver 触发某个事件（如 Epoch 结束）时，所有订阅了这个事件的 Callback 就会自动运行。
+
+意义：实现了关注点分离。Solver 负责“跑”，Callback 负责“看”和“记”。这是构建大型、易维护系统的基石。
+具体来说，callback将训练过程中需要处理的各项事宜**分离**出train函数，实现解耦。
+例如`save_checkpoint`, `early_stop`, `wandb_send`等操作均由callback完成，只需在train函数加上`self.trigger_callbacks("on_epoch_end")`即可
+
+判断一个函数是否应该放入callback中：如果删掉这段代码，模型的训练结果（权重数值）会变吗？
+- 如果会变，那么就说明这一部分代码属于核心逻辑，就应该放在train中
+- 如果不会变，那么说明属于辅助功能，放入callback中
+
 
 
 在完成上述代码的编写以后，我们即可编写`conf/config.yaml`等所有文件
