@@ -21,3 +21,71 @@
 [src.callbacks.early_stopping][INFO] - [EarlyStopping] Counter: 1/3 (Best: 6.4202)
 [src.solver][INFO] - LR updated to: 0.00045235
 [src.solver][INFO] - Epoch 4 | Step 0 | Train Loss: 6.4703
+[src.solver][INFO] - === Epoch 4 Done | Train Loss: 6.4332 ===
+[src.callbacks.checkpoint][INFO] - Saved checkpoint: /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/18-16-54/checkpoints/checkpoint_epoch_5.pt
+[src.solver][INFO] - LR updated to: 0.00042692
+[src.solver][INFO] - Epoch 5 | Step 0 | Train Loss: 6.3798
+[src.solver][INFO] - === Epoch 5 Done | Train Loss: 6.4329 ===
+[src.callbacks.checkpoint][INFO] - Saved checkpoint: /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/18-16-54/checkpoints/checkpoint_epoch_6.pt
+[src.solver][INFO] - LR updated to: 0.00039715
+[src.solver][INFO] - Epoch 6 | Step 0 | Train Loss: 6.5023
+[src.solver][INFO] - === Epoch 6 Done | Train Loss: 6.4326 ===
+[src.callbacks.checkpoint][INFO] - Saved checkpoint: /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-01/18-16-54/checkpoints/checkpoint_epoch_7.pt
+[src.solver][INFO] - LR updated to: 0.00036377
+[src.solver][INFO] - Epoch 7 | Step 0 | Train Loss: 6.3617
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 35, in <module>
+    main()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 32, in main
+    solver.train()
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 173, in train
+    )
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 136, in run_step
+    负责处理分词 (Tokenization) 和解码 (Decoding)。
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 35, in <module>
+    main()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 32, in main
+    solver.train()
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 173, in train
+    )
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 136, in run_step
+    负责处理分词 (Tokenization) 和解码 (Decoding)。
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

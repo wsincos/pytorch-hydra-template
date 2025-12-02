@@ -1,0 +1,22 @@
+[src.solver][INFO] - Start Training... Total Epochs: 3
+[src.solver][INFO] - === Epoch 0 Done | Train Loss: 8.0785 ===
+[src.callbacks.checkpoint][INFO] - New Best Model! Loss: inf -> 7.0368
+[src.callbacks.checkpoint][INFO] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/00-45-59/checkpoints/checkpoint_best.pt
+[src.callbacks.generation_monitor][INFO] - --- [Translation Demo] ---
+Error executing job with overrides: ['train.epochs=3', 'dataset.max_samples=500', 'logger.name=test_run_01', 'callback.training_monitor.params.log_every_n_steps=50', 'dataset.batch_size=32']
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 32, in main
+    solver.train()
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 264, in train
+    self.trigger_callbacks("on_epoch_end")
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 129, in trigger_callbacks
+    getattr(cb, hook_name)(self)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/callbacks/generation_monitor.py", line 39, in on_epoch_end
+    s_text = tokenizer.decode(src_tensor, skip_special_tokens=True)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/transformers/tokenization_utils_base.py", line 4059, in decode
+    return self._decode(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/transformers/tokenization_utils_fast.py", line 682, in _decode
+    text = self._tokenizer.decode(token_ids, skip_special_tokens=skip_special_tokens)
+TypeError: argument 'ids': 'Tensor' object cannot be converted to 'Sequence'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

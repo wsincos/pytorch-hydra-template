@@ -6,9 +6,9 @@ test_path: "./data/datasets/opus-100/test/test-00000-of-00001.parquet"
 source_lang: "en"
 target_lang: "zh"
 
-tokenizer_path: "./data/pretrained_models/bert-base-chinese"
+tokenizer_path: "./data/pretrained_models/bert-base-multilingual-cased"
 # 实验参数
 max_samples: -1  # 先跑 5000 条测试，稳定后可以改为 -1 (跑全量)
-seq_len: 128
-batch_size: 128
+seq_len: 64
+batch_size: 96
 num_workers: 8

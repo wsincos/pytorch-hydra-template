@@ -30,7 +30,7 @@ def get_tokenizer(model_path=None):
         return _tokenizer
     
     if model_path is None:
-        model_path = "google-bert/bert-base-chinese"
+        model_path = "google-bert/bert-base-multilingual-cased"
     # else:
     #     model_path = os.path.abspath(model_path)
     logger.info(f"[Data] Loading Tokenizer from: {model_path}...")
@@ -38,7 +38,7 @@ def get_tokenizer(model_path=None):
         _tokenizer = AutoTokenizer.from_pretrained(model_path)
     except OSError:
         logger.warning(f"[Data] Local path not found. Downloading...")
-        _tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-chinese")
+        _tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-multilingual-cased")
         
     return _tokenizer
 
@@ -140,6 +140,52 @@ def get_dataloader(cfg, split='train'):
     # 训练集：必须 Shuffle (打乱)，否则模型学不到东西
     # 测试集：不要 Shuffle，方便对比结果
     is_shuffle = (split == 'train')
+
+    # # === 数据检查代码 (Debug 用) ===
+    # print("="*60)
+    # print(f"[Data Check] Checking sample 0 from {split} set...")
+    
+    # # 1. 获取 Tokenizer 信息
+    # tokenizer = dataset.tokenizer
+    # bos_id = tokenizer.bos_token_id
+    # cls_id = tokenizer.cls_token_id
+    # eos_id = tokenizer.eos_token_id
+    # sep_id = tokenizer.sep_token_id
+    
+    # print(f"Tokenizer Special IDs:")
+    # print(f"  BOS ID: {bos_id} (SentencePiece/GPT 风格)")
+    # print(f"  CLS ID: {cls_id} (BERT 风格)")
+    # print(f"  EOS ID: {eos_id}")
+    
+    # # 2. 获取第一个样本
+    # src, tgt = dataset[0] 
+    
+    # # 3. 打印 Tensor 前几个 ID
+    # print(f"\nSample 0 Tensor:")
+    # print(f"  Src (First 5): {src[:5].tolist()}")
+    # print(f"  Tgt (First 5): {tgt[:5].tolist()}")
+
+    # # 4. 检查开头是否匹配 BOS
+    # # 有些 Tokenizer 没有 bos_id，用 cls_id 代替
+    # check_bos = bos_id if bos_id is not None else cls_id
+    
+    # src_start = src[0].item()
+    # tgt_start = tgt[0].item()
+    
+    # print(f"\n[BOS Check]")
+    # if check_bos is not None:
+    #     print(f"  Expect BOS/CLS ID: {check_bos}")
+    #     print(f"  Src starts with BOS? {src_start == check_bos}")
+    #     print(f"  Tgt starts with BOS? {tgt_start == check_bos}")
+    # else:
+    #     print("  Tokenizer has NO bos_token_id and NO cls_token_id defined!")
+
+    # # 5. 反向 Decode (终极验证)
+    # # skip_special_tokens=False 让你能亲眼看到 [CLS], <s> 等符号
+    # print(f"\n[Decode Check]")
+    # print(f"  Src: {tokenizer.decode(src.tolist(), skip_special_tokens=False)}")
+    # print(f"  Tgt: {tokenizer.decode(tgt.tolist(), skip_special_tokens=False)}")
+    # print("="*60)
     
     return DataLoader(
         dataset, 

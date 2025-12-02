@@ -1,0 +1,21 @@
+[src.solver][INFO] - Start Training... Total Epochs: 3
+[src.solver][INFO] - === Epoch 0 Done | Train Loss: 3.8931 ===
+Error executing job with overrides: ['train.epochs=3', 'dataset.max_samples=500', 'logger.name=test_run_03', 'callback.training_monitor.params.log_every_n_steps=50', 'dataset.batch_size=32']
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 32, in main
+    solver.train()
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 276, in train
+    self.evaluate() # 内部更新了 self.test_loss
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 231, in evaluate
+    loss = self.run_step(x, y)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 214, in run_step
+    self.scaler.scale(loss).backward()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

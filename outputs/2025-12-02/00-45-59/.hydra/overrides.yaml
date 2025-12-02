@@ -1,0 +1,5 @@
+- train.epochs=3
+- dataset.max_samples=500
+- logger.name=test_run_01
+- callback.training_monitor.params.log_every_n_steps=50
+- dataset.batch_size=32

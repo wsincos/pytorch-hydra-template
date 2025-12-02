@@ -1,0 +1,137 @@
+[src.solver][INFO] - Start Training... Total Epochs: 3
+[src.solver][INFO] - === Epoch 0 Done | Train Loss: 8.0785 ===
+[src.callbacks.checkpoint][INFO] - New Best Model! Loss: inf -> 7.0368
+[src.callbacks.checkpoint][INFO] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/00-54-43/checkpoints/checkpoint_best.pt
+[src.callbacks.generation_monitor][INFO] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor][INFO] - Src : .resolution/.3/57/.25and.1andamendmentcontainedindocument/.3/57/.72
+[src.callbacks.generation_monitor][INFO] - Tgt : .决议草案/.3/57/.25和.1以及文件/.3/57/.72所载修正案
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : (a)rotorassemblies:
+[src.callbacks.generation_monitor][INFO] - Tgt : 甲替硝基苯胺(;)
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : 8.1hasconsideredthiscommunicationinthelightofalltheinformationmadeavailabletoitbytheparties,asrequiredbyarticle5,paragraph1,ofthe.
+[src.callbacks.generation_monitor][INFO] - Tgt : 8.1人权事务委员会根据当事各方依《任择议定书》第五条第1款规定提交的一切现有资料审议了来文。
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : •forand,,andtheofthe()in,
+[src.callbacks.generation_monitor][INFO] - Tgt : •非洲联盟和平与安全专员大使和非洲联盟驻布隆迪特别代表马马杜·巴大使
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : ,someofyouarelike,"meansyogurt."
+[src.callbacks.generation_monitor][INFO] - Tgt : 是的，有些人是喜欢，"他的意思是酸奶。"
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : havemadeagreatdecision.'vedecidedtogetmarried.
+[src.callbacks.generation_monitor][INFO] - Tgt : 我作了伟大的决定，我要结婚了
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : agestructureisconcerned,mostunemployedpersonswerefoundinthe25-39(42.6%)and40-54(27.6%)agegroups,representingatotalof172,400persons,whileyoungpeopleinthe15-24agegroupaccountedfor24.3percent(151,600).
+[src.callbacks.generation_monitor][INFO] - Tgt : 就年龄结构而言，大多数失业人口在25-39岁年龄组(42.6%)和40-54岁年龄组(27.6%)，总数为172,400人，而在15-24岁年龄组的年轻人占24.3%(151,600人)。
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : onlydefenceagainstanuclearcatastropheisthetotaleliminationofthoseweapons.
+[src.callbacks.generation_monitor][INFO] - Tgt : 防范核灾难的唯一途径就是彻底销毁这些武器。
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : 24,alsofrom,
+[src.callbacks.generation_monitor][INFO] - Tgt : 同样是来自卡尔特巴赫马场的：
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : ofthefinaloutcomedocumentcontainingthereviewandassessmentoftheimplementationoftheandofoftheacknowledgesthathavetakenanumberofactionstoenhancetheircapacitiestoachievegoalsofthefor.
+[src.callbacks.generation_monitor][INFO] - Tgt : 18．最后结果文件第二部分审查和评估了执行首脑会议《哥本哈根宣言和行动纲领》的情况。该文件确认，会员国已采取各种行动加强实现社会发展问题世界首脑会议目标的能力。
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.solver][INFO] - LR updated to: 0.00037525
+[src.solver][INFO] - === Epoch 1 Done | Train Loss: 6.4183 ===
+[src.callbacks.checkpoint][INFO] - New Best Model! Loss: 7.0368 -> 6.8870
+[src.callbacks.checkpoint][INFO] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/00-54-43/checkpoints/checkpoint_best.pt
+[src.callbacks.generation_monitor][INFO] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor][INFO] - Src : glamourtothefoggynight
+[src.callbacks.generation_monitor][INFO] - Tgt : 給霧夜添上濃裝
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : did,however,concludethat,asnoreasonsweregivenintheletterwherebyinformedofitsrefusaltoexecutetheletterrogatory,hadfailedtocomplywithitsinternationalobligationunderarticle17ofthe1986toprovidereasons.
+[src.callbacks.generation_monitor][INFO] - Tgt : 不过，法院得出结论认为，因为法国在通知吉布提它将要拒绝执行后者提出的调查委托书的信中没有说明理由，所以法国没有遵守1986年《刑事事项互助公约》第17条为其规定的关于说明理由的国际义务。
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : dated52002fromtheoftotheaddressedtothe--forand
+[src.callbacks.generation_monitor][INFO] - Tgt : 2002年8月5日阿曼常驻联合国代表以阿拉伯集团主席的身份给主管经济和社会事务部副秘书长的信
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : additiontotheworkoftrials,thehasheardanddecidedanumberofimportantappeals.
+[src.callbacks.generation_monitor][INFO] - Tgt : 除了审判工作外，法庭还听讯了若干重要上诉并对其作出决定。
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : strategiesincludecapacity-buildingforhumanresourcesinthestatesandmunicipalitiesforimplementingthe();providingdirecttechnicalsupportforstatesandmunicipaldistrictstoinvestigateoutbreaksofcholera;revisingtheand(deeda);reviewingtheinstructionmaterialsforcapacity-buildinginmonitoringacutediar
+[src.callbacks.generation_monitor][INFO] - Tgt : 战略包括在各州和各市中实施急性腹泻疾病监控方案的人力资源的能力建设；为各州和市辖区提供直接技术支持以调查霍乱发作情况；修订霍乱控制和预防综合手册；审查监控急性腹泻疾病的能力建设的指导说明材料；根据与巴西东北地区的州卫生局订立的协议转移资金，为巴西东北
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : today,'mheretoactuallygiveyouafirstglimpseofwhatthenewtelescope,,hasbeenabletotellusinthelastfewweeks,and,loandbehold,wearebacktotheharmonyandtofulfillingthedreamsof.
+[src.callbacks.generation_monitor][INFO] - Tgt : 所以今天我将会给你展示开普勒望远镜在几周之前所取得的最新成果请看，我们又得到了类似太阳系的平衡这几乎实现了哥白尼的梦想
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : needtofinishreading"".
+[src.callbacks.generation_monitor][INFO] - Tgt : 我得读完《堂吉诃德》
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : 'snoneofmybusinessifhe'sgayornot
+[src.callbacks.generation_monitor][INFO] - Tgt : ぃgay闽或ㄆ摆
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : ,therehasbeenatransformationfromtheextendedfamilytothenuclearfamilyinthewakeofthecountry'sentryintoaphaseofrapidurbanizationandthespreadofeducation.
+[src.callbacks.generation_monitor][INFO] - Tgt : 的确，在国家进入城市化和教育普及的快速发展时代之后，大家庭也在向小家庭转变。
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : present,ofwhichthe,,,,andtextsareequallyauthentic,shallbedepositedinthearchivesofthe.
+[src.callbacks.generation_monitor][INFO] - Tgt : 1.本议定书的阿拉伯文、中文、英文、法文、俄文和西班牙文文本具有同等效力,应交存联合国档案库。
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.solver][INFO] - LR updated to: 0.00012575
+[src.solver][INFO] - === Epoch 2 Done | Train Loss: 6.2287 ===
+[src.callbacks.checkpoint][INFO] - New Best Model! Loss: 6.8870 -> 6.7992
+[src.callbacks.checkpoint][INFO] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/00-54-43/checkpoints/checkpoint_best.pt
+[src.callbacks.generation_monitor][INFO] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor][INFO] - Src : [].!
+[src.callbacks.generation_monitor][INFO] - Tgt : 嗨，老兄，感觉咋样？
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : .
+[src.callbacks.generation_monitor][INFO] - Tgt : 我是埃克爱普斯登
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : didn'tyoutakethatplane?
+[src.callbacks.generation_monitor][INFO] - Tgt : 你为什么不乘那班飞机?
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : isourgoalthatthroughacombinationofuniformassessmentsconductedby,,,and-,allcountriesthroughouttheworldwillbeassessedagainstthestandards.
+[src.callbacks.generation_monitor][INFO] - Tgt : 我们的目标是，通过金融行动工作组、货币基金组织、世界银行和类似于金融行动工作组的区域机构共同进行统一的评估，世界各国都将按照金融行动工作组的标准得到评估。
+[src.callbacks.generation_monitor][INFO] - Pred: 的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的的
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : ,sir!moreplease!
+[src.callbacks.generation_monitor][INFO] - Tgt : 嗨，服務員，再來兩杯
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : !.
+[src.callbacks.generation_monitor][INFO] - Tgt : 棒极了!
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : ,butthenwouldn't.
+[src.callbacks.generation_monitor][INFO] - Tgt : -?没有.到现在为止应该没有.
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : hasannouncedthatitwillceasethepunitivedemolitionofhousesbelongingtopersonswhohavecommittedactsofviolenceagainst.
+[src.callbacks.generation_monitor][INFO] - Tgt : 国防军宣布，将停止惩罚性拆毁对以色列人犯下暴力行为的人的住房。
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : -'mkeepingthis.
+[src.callbacks.generation_monitor][INFO] - Tgt : 我会留着它的
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.callbacks.generation_monitor][INFO] - Src : ,no,no,no,no,myfriend.
+[src.callbacks.generation_monitor][INFO] - Tgt : 呃不不不不我的朋友
+[src.callbacks.generation_monitor][INFO] - Pred:
+[src.callbacks.generation_monitor][INFO] - --------------------
+[src.solver][INFO] - LR updated to: 0.00000100
+[src.solver][INFO] - Training Finished.

@@ -1,0 +1,133 @@
+[__main__][INFO] - ====== Configuration ======
+[__main__][INFO] - 
+train:
+  seed: 42
+  device: cuda
+  epochs: 20
+checkpoint:
+  enabled: true
+  save_dir: checkpoints
+model:
+  name: seq2seq_transformer
+  wrapper:
+    name: Seq2SeqWrapper
+  shared:
+    src_vocab_size: 21128
+    tgt_vocab_size: 21128
+    d_model: 512
+    pe_cfg:
+      name: SinusoidalPE
+      d_model: 512
+      dropout: 0.1
+      max_len: 5000
+  arch:
+    encoder:
+      name: TransformerEncoder
+      input_dim: 21128
+      d_model: 512
+      nhead: 8
+      num_layers: 6
+      pe_cfg:
+        name: SinusoidalPE
+        d_model: 512
+        dropout: 0.1
+        max_len: 5000
+    decoder:
+      name: TransformerDecoder
+      output_dim: 21128
+      d_model: 512
+      nhead: 8
+      num_layers: 6
+      pe_cfg:
+        name: SinusoidalPE
+        d_model: 512
+        dropout: 0.1
+        max_len: 5000
+dataset:
+  name: Opus100Dataset
+  train_path: ./data/datasets/opus-100/train/train-00000-of-00001.parquet
+  test_path: ./data/datasets/opus-100/test/test-00000-of-00001.parquet
+  source_lang: en
+  target_lang: zh
+  tokenizer_path: ./data/pretrained_models/opus
+  max_samples: -1
+  seq_len: 128
+  batch_size: 64
+  num_workers: 8
+optimizer:
+  name: AdamW
+  params:
+    lr: 0.0005
+    weight_decay: 0.01
+    betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+criterion:
+  name: CrossEntropyLoss
+  params: {}
+logger:
+  enable: true
+  project: hydra-style-transformer
+  entity: null
+  name: test_v1
+  group: null
+  tags:
+  - opus
+  - transformer
+  notes: null
+  mode: online
+callback:
+  ckpt:
+    name: CheckpointCallback
+    params:
+      save_every: 1
+      keep_last: true
+  early_stop:
+    name: EarlyStopping
+    params:
+      patience: 3
+      min_delta: 0.001
+  training_monitor:
+    name: TrainingMonitor
+    params:
+      log_every_n_steps: 100
+  translation_monitor:
+    name: TranslationMonitor
+    params:
+      num_samples: 10
+scheduler:
+  name: CosineAnnealingLR
+  params:
+    T_max: 20
+    eta_min: 1.0e-06
+
+[__main__][INFO] - ===========================
+[__main__][INFO] - Initializing Solver with GPU: 6
+[src.solver][INFO] - Building Loader...
+[src.data.datasets][INFO] - [Data] Loading local parquet file: ./data/datasets/opus-100/train/train-00000-of-00001.parquet...
+[src.data.datasets][INFO] - [Data] Loading Tokenizer from: ./data/pretrained_models/opus...
+[src.data.datasets][INFO] - [Data] Loading local parquet file: ./data/datasets/opus-100/test/test-00000-of-00001.parquet...
+[src.solver][INFO] - Auto-setting vocab size from Tokenizer: 65001
+[src.solver][INFO] - Building Model: seq2seq_transformer
+[src.models.builders][INFO] - [Builder] Instantiating Encoder: TransformerEncoder
+[src.models.builders][INFO] - [Builder] Instantiating Decoder: TransformerDecoder
+[src.models.builders][INFO] - [Builder] Instantiating Model: Seq2SeqWrapper
+[src.solver][INFO] - Building Callback: ckpt (CheckpointCallback)
+[src.callbacks.checkpoint][INFO] - [Callback] Checkpoints will be saved to: /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/12-56-42/checkpoints
+[src.solver][INFO] - Building Callback: early_stop (EarlyStopping)
+[src.solver][INFO] - Building Callback: training_monitor (TrainingMonitor)
+[src.solver][INFO] - Building Callback: translation_monitor (TranslationMonitor)
+[src.solver][INFO] - Start Training... Total Epochs: 20
+[asyncio][WARNING] - socket.send() raised exception.
+[asyncio][WARNING] - socket.send() raised exception.
+[asyncio][WARNING] - socket.send() raised exception.
+[asyncio][WARNING] - socket.send() raised exception.
+[asyncio][WARNING] - socket.send() raised exception.
+[asyncio][WARNING] - socket.send() raised exception.
+[asyncio][WARNING] - socket.send() raised exception.
+[asyncio][WARNING] - socket.send() raised exception.
+[asyncio][WARNING] - socket.send() raised exception.
+[asyncio][WARNING] - socket.send() raised exception.
+[asyncio][WARNING] - socket.send() raised exception.
+[asyncio][WARNING] - socket.send() raised exception.

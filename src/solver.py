@@ -127,6 +127,58 @@ class Solver:
         for cb in self.callbacks:
             # 相当于调用 cb.on_epoch_end(self)
             getattr(cb, hook_name)(self)
+    
+
+    @torch.no_grad()
+    def inference(self, text_list):
+        """
+        输入文本列表，输出翻译结果列表。
+        负责处理分词 (Tokenization) 和解码 (Decoding)。
+        
+        Args:
+            text_list: list[str], 例如 ["Hello world", "Deep learning"]
+        Returns:
+            list[str], 例如 ["你好世界", "深度学习"]
+        """
+        self.model.eval()
+        
+        # 1. 获取 Tokenizer (从训练集 Dataset 中借用)
+        # 假设 Dataset 里已经初始化了 self.tokenizer
+        tokenizer = self.train_loader.dataset.tokenizer
+
+        
+        
+        # 获取特殊 Token ID (用于生成时的控制)
+        bos_id = tokenizer.bos_token_id if tokenizer.bos_token_id is not None else tokenizer.cls_token_id  # BERT 的 BOS 是 [CLS]
+        eos_id = tokenizer.eos_token_id if tokenizer.eos_token_id is not None else tokenizer.sep_token_id  # BERT 的 EOS 是 [SEP]
+        
+        # 2. 文本 -> Tensor (Batch Tokenization)
+        # padding=True: 自动把这一批文本补齐到同样长度
+        # truncation=True: 防止输入太长爆显存
+        inputs = tokenizer(
+            text_list, 
+            padding=True, 
+            truncation=True,    
+            max_length=128, 
+            return_tensors=None
+        )
+        
+        src_tensor = torch.tensor(inputs['input_ids']).to(self.device) # [Batch, SeqLen]
+        
+        # 3. 调用模型的底层 generate
+        generated_ids = self.model.generate(
+            src_tensor, 
+            bos_token_id=bos_id, 
+            eos_token_id=eos_id,
+            max_len=64
+        )
+        
+        # 4. Tensor -> 文本 (Batch Decoding)
+        # skip_special_tokens=True 会自动去掉 [CLS], [SEP], [PAD]
+        decoded_preds = tokenizer.batch_decode(generated_ids.tolist(), skip_special_tokens=True)
+        
+        self.model.train()
+        return decoded_preds
             
     def run_step(self, x, y):
         x, y = x.to(self.device), y.to(self.device)
@@ -197,14 +249,8 @@ class Solver:
             # --- 评估 ---
             self.evaluate() # 内部更新了 self.test_loss
             
-            # --- 更新最佳状态 (给 CheckpointCallback 用) ---
-            # self.is_best = False
-            # if self.test_loss < self.best_loss:
-            #     logger.info(f"New Best Model! Loss: {self.best_loss:.4f} -> {self.test_loss:.4f}")
-            #     self.best_loss = self.test_loss
-            #     self.is_best = True
             
-            # --- [核心] 触发 Epoch 结束回调 ---
+            # --- 触发 Epoch 结束回调 ---
             # 这里会执行：保存模型、检查早停
             self.trigger_callbacks("on_epoch_end")
             

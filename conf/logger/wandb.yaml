@@ -1,6 +1,6 @@
 enable: true
 
-project: "hydra-styple-transformer"  # 在 WandB 网页上显示的项目名称
+project: "hydra-style-transformer"  # 在 WandB 网页上显示的项目名称
 entity: null                     # 你的用户名或团队名 (留空 null 则默认为当前登录用户)
 
 

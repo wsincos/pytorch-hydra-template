@@ -26,8 +26,7 @@ hydra:
     formatters:
       simple:
         # 默认是: "[%(asctime)s][%(name)s][%(levelname)s] - %(message)s"
-        # 我们删掉 [%(asctime)s] 即可
-        format: "[%(name)s][%(levelname)s] - %(message)s"
+        format: "[%(name)s] - %(message)s"
   # 我想重命名输出目录
   # run:
   #   dir: ./outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}_${hydra.job.num} # default

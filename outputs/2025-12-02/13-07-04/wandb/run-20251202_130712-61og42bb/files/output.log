@@ -1,0 +1,29 @@
+[src.solver] - Start Training... Total Epochs: 20
+[src.solver] - === Epoch 0 Done | Train Loss: 0.0022 ===
+[src.callbacks.checkpoint] - New Best Model! Loss: inf -> 1.4337
+[src.callbacks.checkpoint] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/13-07-04/checkpoints/checkpoint_best.pt
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 32, in main
+    solver.train()
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 262, in train
+    self.trigger_callbacks("on_epoch_end")
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 129, in trigger_callbacks
+    getattr(cb, hook_name)(self)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/callbacks/generation_monitor.py", line 50, in on_epoch_end
+    pred_texts = solver.inference(src_texts)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 167, in inference
+    generated_ids = self.model.generate(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/models/modules/wrappers.py", line 38, in generate
+    ys = torch.full((batch_size, 1), bos_token_id, dtype=torch.long).to(device)
+TypeError: full() received an invalid combination of arguments - got (tuple, NoneType, dtype=torch.dtype), but expected one of:
+ * (tuple of ints size, Number fill_value, *, tuple of names names, torch.dtype dtype, torch.layout layout, torch.device device, bool pin_memory, bool requires_grad)
+ * (tuple of ints size, Number fill_value, *, Tensor out, torch.dtype dtype, torch.layout layout, torch.device device, bool pin_memory, bool requires_grad)
+
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.

@@ -6,3 +6,6 @@
 {"time":"2025-12-01T18:17:01.796554521+08:00","level":"INFO","msg":"writer: started","stream_id":"jil0oug3"}
 {"time":"2025-12-01T19:42:30.200926747+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/wsincos1025/hydra-styple-transformer/jil0oug3/file_stream\": read tcp 10.208.40.40:51010->35.186.228.49:443: read: connection reset by peer"}
 {"time":"2025-12-01T21:55:15.559298154+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/wsincos1025/hydra-styple-transformer/jil0oug3/file_stream\": unexpected EOF"}
+{"time":"2025-12-02T01:28:00.997187407+08:00","level":"INFO","msg":"stream: closing","id":"jil0oug3"}
+{"time":"2025-12-02T01:28:02.391694814+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-12-02T01:28:03.803757057+08:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/wsincos1025/hydra-styple-transformer/jil0oug3/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
