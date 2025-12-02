@@ -393,7 +393,7 @@ def get_dataloader(cfg, split):
 
 
 ### 5.1 callback
-Callback 是什么：是插入到主程序流程中的**“钩子（Hooks）”或“插件（Plugins）”**。
+Callback 是什么：是插入到主程序流程中的“钩子（Hooks）”或“插件（Plugins）”。
 
 如何理解：它是**“事件驱动”**的。当 Solver 触发某个事件（如 Epoch 结束）时，所有订阅了这个事件的 Callback 就会自动运行。
 
@@ -436,7 +436,7 @@ class Callback:
 -   `TrainingMonitor` 保存模型的lr等参数，并上传到wandb
 -   `TranslationMonitor` 抽样检查模型生成质量
 
->   
+>   需要注意的是，一般在编程过程中，我们一般不会在写`solver.train`的同时完成callback的编写，而是在编写结束以后，如果发现`train`内部的繁琐细节较多才会考虑单独编写，对于一般的项目其实没有必要过于追求“公式化”callback
 
 
 
