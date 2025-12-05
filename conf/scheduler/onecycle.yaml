@@ -1,0 +1,16 @@
+name: OneCycleLR
+params:
+  # max_lr 必须比 optimizer 里的 lr 大（或者相同）
+  max_lr: 0.001
+  
+  # 总步数：epochs * steps_per_epoch
+  # 这里有个坑：OneCycleLR 需要知道总步数。
+  # 如果你不想手动算，可以在 Solver 里动态注入 total_steps。
+  # 简单起见，可以先设个大概值，或者在 Solver 初始化时计算。
+  total_steps: 100000 
+  
+  # Warmup 占比：前 30% 的时间用来热身
+  pct_start: 0.3
+  
+  div_factor: 25  # 初始 lr = max_lr / 25
+  final_div_factor: 10000 # 最终 lr 降得很低

@@ -119,3 +119,882 @@ scheduler:
 [src.solver] - Building Callback: training_monitor (TrainingMonitor)
 [src.solver] - Building Callback: translation_monitor (TranslationMonitor)
 [src.solver] - Start Training... Total Epochs: 20
+[src.solver] - === Epoch 0 Done | Train Loss: 6.5200 ===
+[src.callbacks.checkpoint] - New Best Model! Loss: inf -> 6.5033
+[src.callbacks.checkpoint] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/13-48-23/checkpoints/checkpoint_best.pt
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : C. Draft resolution A / C. 3 / 57 / L. 25 and Rev. 1 and amendment contained in document A / C. 3 / 57 / L. 72
+[src.callbacks.generation_monitor] - Tgt : C.决议草案A/C.3/57/L.25和Rev.1以及文件A/C.3/57/L.72所载修正案
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : ( a ) Complete rotor assemblies :
+[src.callbacks.generation_monitor] - Tgt : 甲替硝基苯胺(MNA;PNMA)
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : 8. 1 The Committee has considered this communication in the light of all the information made available to it by the parties, as required by article 5, paragraph 1, of the Optional Protocol.
+[src.callbacks.generation_monitor] - Tgt : 8.1人权事务委员会根据当事各方依《任择议定书》第五条第1款规定提交的一切现有资料审议了来文。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : • African Union Commissioner for Peace and Security, Ambassador Said Djinnit, and the Special Representative of the African Union ( AU ) in Burundi, Ambassador Mamadou Bah
+[src.callbacks.generation_monitor] - Tgt : •非洲联盟和平与安全专员SaidDjinnit大使和非洲联盟驻布隆迪特别代表马马杜·巴大使
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Yeah, some of you are like, " He means yogurt. "
+[src.callbacks.generation_monitor] - Tgt : 是的，有些人是喜欢，"他的意思是酸奶。"
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : I have made a great decision. I ' ve decided to get married.
+[src.callbacks.generation_monitor] - Tgt : 我作了伟大的决定，我要结婚了
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Where age structure is concerned, most unemployed persons were found in the 25 - 39 ( 42. 6 % ) and 40 - 54 ( 27. 6 % ) age groups, representing a total of 172, 400 persons, while young people in the 15 - 24 age group accounted for 24.
+[src.callbacks.generation_monitor] - Tgt : 就年龄结构而言，大多数失业人口在25-39岁年龄组(42.6%)和40-54岁年龄组(27.6%)，总数为172,400人，而在15-24岁年龄组的
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The only defence against a nuclear catastrophe is the total elimination of those weapons.
+[src.callbacks.generation_monitor] - Tgt : 防范核灾难的唯一途径就是彻底销毁这些武器。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Number 24, also from Kaltenbach,
+[src.callbacks.generation_monitor] - Tgt : 同样是来自卡尔特巴赫马场的：
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Part II of the final outcome document containing the review and assessment of the implementation of the Copenhagen Declaration and Programme of Action of the Summit acknowledges that Member States have taken a number of actions to enhance their capacities to achieve goals of the World Summit for Social Development.
+[src.callbacks.generation_monitor] - Tgt : 18．最后结果文件第二部分审查和评估了执行首脑会议《哥本哈根宣言和行动纲领》的情况。该文件确认，会员国已采取各种行动加强实现社
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00049693
+[src.solver] - === Epoch 1 Done | Train Loss: 6.5055 ===
+[src.callbacks.checkpoint] - New Best Model! Loss: 6.5033 -> 6.5002
+[src.callbacks.checkpoint] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/13-48-23/checkpoints/checkpoint_best.pt
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : Add glamour to the foggy night
+[src.callbacks.generation_monitor] - Tgt : 給霧夜添上濃裝
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The Court did, however, conclude that, as no reasons were given in the letter whereby France informed Djibouti of its refusal to execute the letter rogatory, France had failed to comply with its international obligation under article 17 of the 1986 Convention to provide reasons.
+[src.callbacks.generation_monitor] - Tgt : 不过，法院得出结论认为，因为法国在通知吉布提它将要拒绝执行后者提出的调查委托书的信中没有说明理由，所以法国没有遵守1986年《刑事
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Letter dated 5 August 2002 from the Permanent Representative of Oman to the United Nations addressed to the Under - Secretary - General for Economic and Social Affairs
+[src.callbacks.generation_monitor] - Tgt : 2002年8月5日阿曼常驻联合国代表以阿拉伯集团主席的身份给主管经济和社会事务部副秘书长的信
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : In addition to the work of trials, the Tribunal has heard and decided a number of important appeals.
+[src.callbacks.generation_monitor] - Tgt : 除了审判工作外，法庭还听讯了若干重要上诉并对其作出决定。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The strategies include capacity - building for human resources in the states and municipalities for implementing the Acute Diarrhoeal Diseases Monitoring Programme ( MDDA ) ; providing direct technical support for states and municipal districts to investigate outbreaks of cholera ; revising the Integrated Cholera Control and Prevention Handbook ( Manual Int
+[src.callbacks.generation_monitor] - Tgt : 战略包括在各州和各市中实施急性腹泻疾病监控方案的人力资源的能力建设；为各州和市辖区提供直接技术支持以调查霍乱发作情况；修订霍
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : So today, I ' m here to actually give you a first glimpse of what the new telescope, Kepler, has been able to tell us in the last few weeks, and, lo and behold, we are back to the harmony and to fulfilling the dreams of Copernicus
+[src.callbacks.generation_monitor] - Tgt : 所以今天我将会给你展示开普勒望远镜在几周之前所取得的最新成果请看，我们又得到了类似太阳系的平衡这几乎实现了哥白尼的梦想
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : I need to finish reading " Don Quixote ".
+[src.callbacks.generation_monitor] - Tgt : 我得读完《堂吉诃德》
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : It ' s none of my business if he ' s gay or not
+[src.callbacks.generation_monitor] - Tgt : ぃgay闽иぐ或摆
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Indeed, there has been a transformation from the extended family to the nuclear family in the wake of the country ' s entry into a phase of rapid urbanization and the spread of education.
+[src.callbacks.generation_monitor] - Tgt : 的确，在国家进入城市化和教育普及的快速发展时代之后，大家庭也在向小家庭转变。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The present Protocol, of which the Arabic, Chinese, English, French, Russian and Spanish texts are equally authentic, shall be deposited in the archives of the United Nations.
+[src.callbacks.generation_monitor] - Tgt : 1.本议定书的阿拉伯文、中文、英文、法文、俄文和西班牙文文本具有同等效力,应交存联合国档案库。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00048779
+[src.solver] - === Epoch 2 Done | Train Loss: 6.5038 ===
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : [ Groans ] Hey. Yo!
+[src.callbacks.generation_monitor] - Tgt : ，老兄，感觉咋样？
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Ike Epstein.
+[src.callbacks.generation_monitor] - Tgt : 我是埃克爱普斯登
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Why didn ' t you take that plane?
+[src.callbacks.generation_monitor] - Tgt : 你为什么不乘那班飞机?
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : It is our goal that through a combination of uniform assessments conducted by FA TF, IMF, World Bank, and FA TF - Style Regional Bodies, all countries throughout the world will be assessed against the FATF standards.
+[src.callbacks.generation_monitor] - Tgt : 我们的目标是，通过金融行动工作组、货币基金组织、世界银行和类似于金融行动工作组的区域机构共同进行统一的评估，世界各国都将按照
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Hey, sir! Two more please!
+[src.callbacks.generation_monitor] - Tgt : ，服務員，再來兩杯
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Perfect! OK.
+[src.callbacks.generation_monitor] - Tgt : 棒极了!
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : No, but then I wouldn ' t.
+[src.callbacks.generation_monitor] - Tgt : -PaulDelucca?没有.到现在为止应该没有.
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : IDF has announced that it will cease the punitive demolition of houses belonging to persons who have committed acts of violence against Israelis.
+[src.callbacks.generation_monitor] - Tgt : 国防军宣布，将停止惩罚性拆毁对以色列人犯下暴力行为的人的住房。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : - I ' m keeping this.
+[src.callbacks.generation_monitor] - Tgt : 我会留着它的
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Uh, no, no, no, no, my friend.
+[src.callbacks.generation_monitor] - Tgt : 不不不不我的朋友
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00047281
+[src.solver] - === Epoch 3 Done | Train Loss: 6.5030 ===
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : In addition to the work of trials, the Tribunal has heard and decided a number of important appeals.
+[src.callbacks.generation_monitor] - Tgt : 除了审判工作外，法庭还听讯了若干重要上诉并对其作出决定。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Greenhouse gas emissions and removals should be presented on a gas - by - gas basis in units of mass with emissions by sources listed separately from removals by sinks, except in cases where it may be technically impossible to separate information on sources and sinks in the areas of land use, land -
+[src.callbacks.generation_monitor] - Tgt : 19.温室气体排放量和清除量应按质量单位逐项气体分别提出，源排放量应与汇清除量分别列出，土地利用、土地利用的变化和林业等领域关
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The world needs the United Nations. It needs the United Nations today as much as it did 60 years ago.
+[src.callbacks.generation_monitor] - Tgt : 世界需要联合国，而且今天同60年前一样需要联合国。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Measures for enhanced protection of relief workers should be further strengthened both from within the inter - agency system and by Member States.
+[src.callbacks.generation_monitor] - Tgt : 加强保护救济工作者的措施，在机构间系统之内以及在会员国都应进一步加强。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : In addition, the report focuses on the impact of the movement of skilled labour and analyses the level and characteristics of the migration of skilled labour, the issue of its management and proposed measures for a shift from brain drain to brain circulation ( see sect. III below ).
+[src.callbacks.generation_monitor] - Tgt : 此外，报告着重讨论技能劳工移动的影响，并分析了技能劳工的移徙水平和特征，及其管理的问题，并提议从人才外流转到人才循环
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : { \ bord0 \ shad0 \ alphaH3D } She ' s a bit young, isn ' t she?
+[src.callbacks.generation_monitor] - Tgt : 她還很年輕，不是嗎？
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Welcomes with appreciation the reports of the Expert Seminar on Indigenous Peoples and the Administration of Justice held in Madrid from 12 to 14 November 2003 ( E / CN. 4 / Sub. 2 / AC. 4 / 2004 / 6 ) and the Seminar on Treaties, Agreements and Other Con
+[src.callbacks.generation_monitor] - Tgt : 10.赞赏地欢迎于2003年11月12日至14日在马德里举行的土著人民和司法问题专家讨论会的报告(E/CN.4/Sub.2/2004/6)以及于2003年12
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : You can ' t say Monongahela?
+[src.callbacks.generation_monitor] - Tgt : 你不会读莫农加希拉?
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Delegations are requested to submit the names of their representatives to the Secretary of the Preparatory Committee, Ms. Vivian Pliner - Josephs ( room S - 2950E ; fax : ( 212 ) 963 - 5935 ).
+[src.callbacks.generation_monitor] - Tgt : 请各代表团将其代表姓名送交给筹备委员会秘书VivianPliner-Josephs女士（S-2950E室；电传：(212)963-5935）。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : That integrated approach to globalization, based on annually approved structural indicators, was also crucial to a sustainable development strategy.
+[src.callbacks.generation_monitor] - Tgt : 这种以每年通过的结构指标为基础的综合处理全球化问题的做法也适合于任何可持续发展的战略。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00045235
+[src.solver] - === Epoch 4 Done | Train Loss: 6.5023 ===
+[src.callbacks.checkpoint] - New Best Model! Loss: 6.5002 -> 6.4973
+[src.callbacks.checkpoint] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/13-48-23/checkpoints/checkpoint_best.pt
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : Other delegations expressed support for the UNICEF proposal to develop business continuity plans in principle but asked why this capacity did not already exist.
+[src.callbacks.generation_monitor] - Tgt : 其他一些代表团表示原则上支持儿童基金会关于拟订保持业务持续计划的提议，但询问为何目前尚不具备这一能力。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : In October, an agreement on cooperation to create a Baikal model territory of sustainable development for the world between the government of the Buryat Republic, Russian Federation, and UNA - Russia was signed in Moscow ; and UNA - Russia organized an exhibition featuring the works of the well - known Russian artist, travel
+[src.callbacks.generation_monitor] - Tgt : 10月，在莫斯科签署了俄罗斯联邦布里亚特共和国政府和俄罗斯联合国协会之间关于合作建立世界可持续发展的Baikal样板领土的协定；俄罗斯
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : There ' s a mathematician named Gunter Janek. You know him?
+[src.callbacks.generation_monitor] - Tgt : 你认不认识数学家冈特杰那克？
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The IFF is one of the mechanisms identified by the technical group ' s first report issued in September 2004 and served as the basis for the discussions held at the world leaders meeting on Action Against Hunger and Poverty.
+[src.callbacks.generation_monitor] - Tgt : 国际融资机制是技术小组2004年9月发表的第一份报告指出的机制之一，该报告是世界领导人有关采取行动战胜饥饿和贫穷会议的讨论的基
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : - We ' re really ready to be picked up right now.
+[src.callbacks.generation_monitor] - Tgt : 我们现在真的需要接应
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : { \ bord0 \ shad0 \ alphaH3D } She ' s a bit young, isn ' t she?
+[src.callbacks.generation_monitor] - Tgt : 她還很年輕，不是嗎？
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : [ Audience giggling ] " Bless you. "
+[src.callbacks.generation_monitor] - Tgt : "上帝保佑你"
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : You might very well think that. I couldn ' t possibly comment.
+[src.callbacks.generation_monitor] - Tgt : 你怎么想是你的事我不会对此发表任何看法
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : I wanna be a human.
+[src.callbacks.generation_monitor] - Tgt : 我想做人
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Recalls the invitation by the Ad Hoc Committee to States, as well as regional commissions, intergovernmental organizations and relevant human rights treaty bodies, within their respective mandates, and non - governmental organizations, national disability and human rights institutions and independent experts with an interest in the matter, to
+[src.callbacks.generation_monitor] - Tgt : 17.忆及特设委员会曾请各国以及各区域委员会、政府间组织和有关人权条约机构在各自职权范围内、各非政府组织、各国残疾人和人权机构
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00042692
+[src.solver] - === Epoch 5 Done | Train Loss: 6.5020 ===
+[src.callbacks.checkpoint] - New Best Model! Loss: 6.4973 -> 6.4973
+[src.callbacks.checkpoint] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/13-48-23/checkpoints/checkpoint_best.pt
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : A farm owner told the High Commissioner that Israeli soldiers had destroyed his greenhouses and his family residence during the night of 29 October.
+[src.callbacks.generation_monitor] - Tgt : 一个农场主人告诉高级专员说，以色列士兵在10月29日摧毁了他的温室和家庭住所。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Part II of the final outcome document containing the review and assessment of the implementation of the Copenhagen Declaration and Programme of Action of the Summit acknowledges that Member States have taken a number of actions to enhance their capacities to achieve goals of the World Summit for Social Development.
+[src.callbacks.generation_monitor] - Tgt : 18．最后结果文件第二部分审查和评估了执行首脑会议《哥本哈根宣言和行动纲领》的情况。该文件确认，会员国已采取各种行动加强实现社
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The discriminatory provisions of the Citizenship Act had been identified as far back as 1999, yet the Act had still not been amended.
+[src.callbacks.generation_monitor] - Tgt : 早在1999年就查明了《公民资格法案》中的歧视性条款，然而该《法案》仍未被修正。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : If you really want to be a teacher.
+[src.callbacks.generation_monitor] - Tgt : 如果说你是真的想当老师的话
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : International institutions specializing in information and telecommunication systems should also be involved in the debate.
+[src.callbacks.generation_monitor] - Tgt : 它相信，作为保证国际和平与安全的最高组织，联合国是讨论这些问题的理想机构。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The Chamber may order the measures outlined in paragraph ( g ) if it considers it appropriate in the particular circumstances.
+[src.callbacks.generation_monitor] - Tgt : 分庭若认为在特殊情况下适宜如此，可下令采取（g）款中所述措施。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : ( ii ) Declaration of national satellites
+[src.callbacks.generation_monitor] - Tgt : (二)关于本国卫星的声明
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : travelbybullettrainto travelbybullettrainto nagano. Nagano. Being in a singles group, it ' s
+[src.callbacks.generation_monitor] - Tgt : 但我通常不會跟我面貌相似的人約會
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : However, work programmes are in place in many of them to move further in this regard.
+[src.callbacks.generation_monitor] - Tgt : 但是，其中许多都出台了工作方案争取在这方面取得更多进展。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The circus is as a drug. If enter in your blood, it is arrested.
+[src.callbacks.generation_monitor] - Tgt : 情况非常不好让你流血
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00039715
+[src.solver] - === Epoch 6 Done | Train Loss: 6.5014 ===
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : All of the materials collected by the Task Force will be provided to the Under - Secretary - General for Internal Oversight Services at the completion of the term of the Task Force.
+[src.callbacks.generation_monitor] - Tgt : 工作队在完成其授权任务后，将把收集的所有材料提交主管内部监督事务副秘书长。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : With regard to UNMIK, the Court stated that it was a subsidiary organ of the UN created under Chapter VII of the Charter so that the impugned inaction was, in principle, attributable ' to the UN in the same sense.
+[src.callbacks.generation_monitor] - Tgt : 关于科索沃特派团，欧洲人权法院指出，该特派团是按照《宪章》第七章成立的一个联合国附属机构，因此，被质疑的不行为按同样含义在
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Wednesday, 15 October 2008
+[src.callbacks.generation_monitor] - Tgt : 2008年10月15日，星期三
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Both United Nations tribunals had criticized the methods used by the Task Force and OIOS, and had stated that the person in question had been denied due process.
+[src.callbacks.generation_monitor] - Tgt : 两个联合国法庭都批评工作队和监督厅所使用的方法，指出该相关人士被剥夺了适当程序。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : This does not mean denying the importance of a comprehensive reform that includes adaptation of working methods and the problem of encroachment by the Council on powers and functions of the other main United Nations organs.
+[src.callbacks.generation_monitor] - Tgt : 这并不是否定全面改革的重要性，后者包括调整工作方法以及安理会僭越联合国其他主要机构的职权问题。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : We would like to spend some more time on the Nickel Titanium, give us one more day, we ' ll try our best.
+[src.callbacks.generation_monitor] - Tgt : 记忆金属的材料则要多点时间多一天时间就行了
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The main livelihood of the poor, agriculture, is neglected, and disparities in service delivery remain high.
+[src.callbacks.generation_monitor] - Tgt : 作为穷人主要生计的农业受到忽略，服务提供方面的差距居高不下。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : - Lt. Drebin!
+[src.callbacks.generation_monitor] - Tgt : 卓斌警官弗兰克
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Businesses that are selling sex such as services to prostitute oneself that are not regulated by measures against special sex entertainment businesses stipulated in the revised Law on Control and Improvement of Amusement and Entertainment Business are strictly regulated under the Anti - Prostitution Law and others.
+[src.callbacks.generation_monitor] - Tgt : 在每年12月4日至10日的人权周期间，在人权日这一天，法律事务局、地区法律事务局和人权志愿人员，与有关机构和组织合作，开展深
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Anticipating that African countries will strive to make further progress in their development on the basis of NEPAD, and to help strengthen their partnership with the international community, Japan will convene the third Tokyo International Conference on African Development ( TICAD III ) in October 2003.
+[src.callbacks.generation_monitor] - Tgt : 预计非洲国家将努力在新伙伴关系基础上取得进一步的发展，并帮助加强它们同国际社会的伙伴关系，日本将于2003年10月举行第三次非洲发展
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00036377
+[src.solver] - === Epoch 7 Done | Train Loss: 6.5012 ===
+[src.callbacks.checkpoint] - New Best Model! Loss: 6.4973 -> 6.4967
+[src.callbacks.checkpoint] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/13-48-23/checkpoints/checkpoint_best.pt
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : The search conducted on Kakumba revealed that he is the beneficial owner of a substantial part of the equity of a company called Vansco in Côte d ' Ivoire.
+[src.callbacks.generation_monitor] - Tgt : 对Kakumba的调查表明他以受益权人的身份拥有科特迪瓦的一家名为Vansco的公司的相当大的一部分产权。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : CEDAW / C / JOR / CO / 4, paras 9 and 10.
+[src.callbacks.generation_monitor] - Tgt : CEDAW/C/JOR/CO/4,paras9and10.
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The housing stock consisted of State houses and apartments, the balance belonging to enterprises, State organizations, trade unions, cooperatives and private persons.
+[src.callbacks.generation_monitor] - Tgt : 487.住宅总量包括国有房屋和公寓，其余属于企业、国家组织、工会、合作社和个人。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Case 1. Testimony of a 19 - year - old Filipina migrant worker trafficked for purposes of sex work in Malaysia
+[src.callbacks.generation_monitor] - Tgt : 案例1.被贩运到马来西亚从事性工作的一名19岁的菲律宾移民女工的证词
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Ah. Feisty, yeah. I like feisty.
+[src.callbacks.generation_monitor] - Tgt : 活泼又直接我最喜欢了
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : So the eye for an eye adage was not intended to mean what it has come to mean, namely that killing be paid for by another killing. Given the brutality of the apartheid era, that would have never worked in my homeland.
+[src.callbacks.generation_monitor] - Tgt : 因此与最初相比，以眼还眼的含义已经发生了变化，变成了以杀戮来抗拒杀戮。种族隔离时期的残忍暴行使得这种做法永远也不可能在我
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : From Bukavu the helicopters made a number of flights in South and North Kivu whose exact destinations were not always known.
+[src.callbacks.generation_monitor] - Tgt : 161.直升机从布卡武起飞后，多次在南北基伍上空飞行，有时去向不明。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Although the Master and Doctoral level students are divided equally between men and women, men have a much greater chance to reach the position of dissertation and thesis supervisor.
+[src.callbacks.generation_monitor] - Tgt : 尽管在硕士和博士生中，男女各占一半，但男性将来担任论文导师的机会更大。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The Technical Secretariat shall develop and maintain, subject to approval by the Executive Council, operational manuals to guide the operation of various components of the verification regime, in accordance with the Verification Annex.
+[src.callbacks.generation_monitor] - Tgt : 39.技术秘书处应按照核查附件的规定，编制和维持用以指导核查制度各个组成部分运作的作业手册，交由执行理事会核准。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Option 2
+[src.callbacks.generation_monitor] - Tgt : 备选案文2
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00032760
+[src.solver] - === Epoch 8 Done | Train Loss: 6.5009 ===
+[src.callbacks.early_stopping] - [EarlyStopping] Counter: 1/3 (Best: 6.4967)
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : Yeah, yeah, yeah, you can. You know, I will go with you.
+[src.callbacks.generation_monitor] - Tgt : 你一定行，我和你去
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Eight new individuals and six new entities have been placed on the Committee ' s List since 25 May 2004.
+[src.callbacks.generation_monitor] - Tgt : 自2004年5月25日以来，又有8名个人和6个实体列入委员会清单。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : For example, there was no institutional forum at which substantive rules on the responsibility of international organizations could be addressed.
+[src.callbacks.generation_monitor] - Tgt : 例如，没有一个可以探讨关于国际组织责任的实质性规则的机构论坛。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The birth and death rates are 13. 35 births per 1, 000 of population and 7. 74 deaths per 1, 000 of population, respectively.
+[src.callbacks.generation_monitor] - Tgt : 人口的出生、死亡率分别为13.35‰和7.74‰。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : India has consistently opposed any unilateral measure by countries that impinge on the sovereignty of another country. These include any attempt to extend the application of a country ' s laws extraterritorially to other sovereign nations.
+[src.callbacks.generation_monitor] - Tgt : 2.印度一贯反对各国单方面实施影响他国主权的措施，包括对其他主权国家域外执行国内法律的任何企图。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Don ' t gamble too much, okay?
+[src.callbacks.generation_monitor] - Tgt : 你别这么好赌不就好了
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : ) Publications of the Federal Ministry for Family Affairs, Senior Citizens, Women and Youth on equality policy topics
+[src.callbacks.generation_monitor] - Tgt : 4．联邦家庭事务、老年公民、妇女和青年部关于平等政策问题的出版物
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : ( e ) In operative paragraph 19, the words to take into account the five concerns were replaced by the words to bear in mind the five issues ;
+[src.callbacks.generation_monitor] - Tgt : (e)执行部分第19段，将考虑到上文第3段确认的五项关切领域等字改为铭记上文第3段所述五个问题；
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The calculation to arrive at the level of reserve follows the same basis as that of the regular reserve.
+[src.callbacks.generation_monitor] - Tgt : 这笔准备金数额的计算方法沿用计算经常准备金时所用的同一基准。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Ike Epstein.
+[src.callbacks.generation_monitor] - Tgt : 我是埃克爱普斯登
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00028953
+[src.solver] - === Epoch 9 Done | Train Loss: 6.5007 ===
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : I ' d haVe been a soleless shoe
+[src.callbacks.generation_monitor] - Tgt : 我是发出梵文响声的脚
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : In 2001 the male unemployment rate was 8. 7 per cent, while the female rate showed an increase over the previous year, rising to 4. 9 per cent.
+[src.callbacks.generation_monitor] - Tgt : 92.2001年，男性失业率为8.7%，而女性失业率较上一年增长，增至4.9%。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : If you really want to be a teacher.
+[src.callbacks.generation_monitor] - Tgt : 如果说你是真的想当老师的话
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : { \ bord0 \ shad0 \ alphaH3D } She ' s a bit young, isn ' t she?
+[src.callbacks.generation_monitor] - Tgt : 她還很年輕，不是嗎？
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Annex I
+[src.callbacks.generation_monitor] - Tgt : 附件一
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Terrorist recruitment in American correctional institutions : an exploratory study of non - traditional faith groups ;
+[src.callbacks.generation_monitor] - Tgt : g.美国教化机构中的恐怖分子征募：关于非传统信仰组织的探索性研究；
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Step 2 : Test Moratorium
+[src.callbacks.generation_monitor] - Tgt : 2.报告
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The Paraguayan Civil Service has been conducting training workshops to familiarize civil servants who will be responsible for exercising these functions.
+[src.callbacks.generation_monitor] - Tgt : 巴拉圭公共行政部门现正举办培训班，以使相关公务员认识这种职能的履行。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Bring it in! Hey, hey. Come on in, guys.
+[src.callbacks.generation_monitor] - Tgt : 带进来，喂喂，进来，兄弟们
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The advisory services of the United Nations Office on Drugs and Crime in relation to United Nations standards and norms in crime prevention and criminal justice should be enhanced.
+[src.callbacks.generation_monitor] - Tgt : 40.应当增强该办事处有关联合国预防犯罪和刑事司法标准和规范的咨询服务，还应根据收集到的信息评价各个项目。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00025050
+[src.solver] - === Epoch 10 Done | Train Loss: 6.5004 ===
+[src.callbacks.checkpoint] - New Best Model! Loss: 6.4967 -> 6.4960
+[src.callbacks.checkpoint] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/13-48-23/checkpoints/checkpoint_best.pt
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : • 2001 : financial problems did not permit participation in the session of the Commission on the Status of Women or in the special session of the General Assembly devoted to children.
+[src.callbacks.generation_monitor] - Tgt : 2001年：由于财政问题，未能参加妇女地位委员会会议和大会专门讨论儿童问题的特别会议。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Part one. General rules
+[src.callbacks.generation_monitor] - Tgt : 第一部分总则
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The Committee further noted with concern reports of the straitened circumstances endured by people displaced by the conflict in Western Sahara, particularly women and children who apparently suffer multiple violations of their rights under the Covenant, and urged Morocco to take steps to protect the rights of those displaced persons and
+[src.callbacks.generation_monitor] - Tgt : 委员会进一步关切地注意到有关西撒哈拉冲突导致的流离失所者历尽艰辛的报告，特别是妇女和儿童，他们按照《公约》应享有的权利显然遭
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : 1. 7 The Committee takes note of the information provided concerning the KoFIU and would like to know whether it is adequately structured, funded, staffed and provided with sufficient technical and other resources to fully perform its authorized functions.
+[src.callbacks.generation_monitor] - Tgt : 1.7委员会注意到已收到的有关金融情报机构的资料，它想知道该金融情报机构的架构是否完善、资金和人员配置是否充足，是否有足够的
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Why don ' t I meet you guys back at the station in about a half?
+[src.callbacks.generation_monitor] - Tgt : 半小时后在加油站见
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : AITIC has signed a number of memorandums of understanding with its international partners, UNCTAD, the United Nations Industrial Development Organization ( UNIDO ), the Organisation of Eastern Caribbean States and the International Law Institute to enable closer and more active collaboration.
+[src.callbacks.generation_monitor] - Tgt : 10.合作署与其国际伙伴，贸发会议，联合国工业发展组织（工发组织），东加勒比国家组织和国际法律研究所签署了一系列谅解备忘录，使
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : For the development of subregional activities in the area of trade capacity - building and private sector development, discussions were held with CARICOM in early 2007.
+[src.callbacks.generation_monitor] - Tgt : 42.为开展贸易能力建设和私营部门发展领域的分区域活动，2007年初与加勒比共同体举行了讨论。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The Special Rapporteur on trafficking in persons, particularly women and children, addressed the Committee and engaged in a dialogue with the representatives of the United States, Thailand, Japan, the Netherlands ( on behalf of the European Union ), the Philippines, Burkina Faso and India.
+[src.callbacks.generation_monitor] - Tgt : 贩运人口特别是妇女与儿童问题特别报告员在委员会讲话，并同以下国家的代表进行对话：美国、泰国、日本、荷兰（代表欧洲联盟）、菲律
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : It ' s the truth. You ' re not my son. You never have been.
+[src.callbacks.generation_monitor] - Tgt : 龟ぃ常ぃ
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Are you sure this is where she said?
+[src.callbacks.generation_monitor] - Tgt : 你确定她说的是这里吗？
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00021147
+[src.solver] - === Epoch 11 Done | Train Loss: 6.5000 ===
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : Agenda item 96 Prevention of an arms race in outer space
+[src.callbacks.generation_monitor] - Tgt : 议程项目96防止外层空间的军备竞赛
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : ( i ) Supporting Governments in devising effective strategies and establishing appropriate legislative, administrative and regulatory regimes against money - laundering ; [ updated to reflect General Assembly resolutions 55 / 2, 55 / 25 and 56 / 261 ]
+[src.callbacks.generation_monitor] - Tgt : (i)支持各国政府制订有效战略，建立适当的立法、行政和管理制度打击洗钱活动；[更新内容，以反映出大会第55/2号、55/25号和56
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The sources contacted were not of much help to the Mission.
+[src.callbacks.generation_monitor] - Tgt : 36.接触到的其他消息来源对特派团没有多大帮助。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Where the plan is approved by the requisite majority of creditors and, where required, confirmed by the court, insolvency laws generally provide that it will be binding upon all affected ordinary unsecured creditors, including creditors who voted in support of the plan, dissenting creditors and
+[src.callbacks.generation_monitor] - Tgt : 540.如果计划得到债权人的必要多数的批准，并在法律要求的情况下，取得法院的确认，破产法一般都规定，计划将对所有受影响的普通无担
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : I have made a great decision. I ' ve decided to get married.
+[src.callbacks.generation_monitor] - Tgt : 我作了伟大的决定，我要结婚了
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The SBI encouraged non - Annex I Parties to submit project proposals for the funding of their subsequent national communications before completion of their current national communications, in order to avoid a lack of continuity in project financing.
+[src.callbacks.generation_monitor] - Tgt : 7.履行机构鼓励非附件一缔约方在完成当前国家信息通报之前提交资助其后续国家信息通报的项目建议，以避免项目供资失去连续性。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The Russian Federation added that assistance would be provided only when a violation had been found by the Committee.
+[src.callbacks.generation_monitor] - Tgt : 俄罗斯联邦还表示，只有在委员会认定发生违反行为后才提供协助。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : - Avete visto quei due inglesi?
+[src.callbacks.generation_monitor] - Tgt : -你看见那两个英国人了?
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Selected company rankings based on the 40 disclosure items
+[src.callbacks.generation_monitor] - Tgt : 表2.所选公司基于40个披露项目的排名表
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Safety in tunnels will thus be reinforced.
+[src.callbacks.generation_monitor] - Tgt : 隧道的安全就会有更大保证。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00017340
+[src.solver] - === Epoch 12 Done | Train Loss: 6.5000 ===
+[src.callbacks.early_stopping] - [EarlyStopping] Counter: 1/3 (Best: 6.4960)
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : Child sexual abuse in Maldives was also relatively high.
+[src.callbacks.generation_monitor] - Tgt : 马尔代夫的儿童性虐待问题也比较严重。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The leaders agreed to revive the biannual tribal conferences that used to be held in the 1960s to solve problems between nomads and farmers.
+[src.callbacks.generation_monitor] - Tgt : 这些领导人商定，重新采用每年举行两次部落会议的作法，1960年代曾举行这样的会议，用以解决游牧民和农民之间的种种问题。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : 1 bis. The Parties included in Annex I shall, individually or jointly, ensure that their aggregate anthropogenic carbon dioxide equivalent emissions of the greenhouse gases listed in Annex A do not exceed their assigned amounts, calculated pursuant to their quantified emission limitation
+[src.callbacks.generation_monitor] - Tgt : 1之二附件一所列缔约方应个别地或共同地确保其在附件A中所列温室气体的人为二氧化碳当量排放总量不超过按照附件B所列量化的限制和
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Dude, what the fuck?!
+[src.callbacks.generation_monitor] - Tgt : 老大，是怎樣啦？
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : She stayed at the Catholic orphanage.
+[src.callbacks.generation_monitor] - Tgt : 从那个时候开始她就自己在教堂的孤儿院自己一个人生活
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : [ ROBOTICS CLUB ]
+[src.callbacks.generation_monitor] - Tgt : （机器人研究社）
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : I would like at the outset to welcome Mr. Sergio Vieira de Mello and Mr. José Ramos - Horta.
+[src.callbacks.generation_monitor] - Tgt : 首先，我谨向塞尔希奥·比埃拉·德梅洛先生和若泽·拉莫斯-奥尔塔先生表示欢迎。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : In 1999 there had been 164 parties from 44 countries listed in default on 188 International Cotton Association arbitration awards, totalling $ 60. 8 million.
+[src.callbacks.generation_monitor] - Tgt : 1999年，有来自44个国家的164个当事方在188项国际棉花协会仲裁裁决中违约，总计达6080万美元。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : During the past year, for example, UNMIL was able to report that allegations of sexual exploitation and abuse had fallen dramatically during the second half of the year.
+[src.callbacks.generation_monitor] - Tgt : 例如，在过去一年中，联利特派团报告说去年下半年涉嫌性剥削和性虐待的指控大幅度减少。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Recalling its resolution 1514 ( XV ) of 14 December 1960, containing the Declaration on the Granting of Independence to Colonial Countries and Peoples, and all resolutions and decisions of the United Nations relating to those Territories, including, in particular, the resolutions adopted by the General Assembly at its fifty - fourth
+[src.callbacks.generation_monitor] - Tgt : 回顾其1960年12月14日第1514(XV)号决议，其中载有《给予殖民地国家和人民独立宣言》，并回顾联合国有关这些领土的所有决议和决定，其中
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00013723
+[src.solver] - === Epoch 13 Done | Train Loss: 6.4997 ===
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : There are many ways to do much more within existing structures and available resources in terms of time and money.
+[src.callbacks.generation_monitor] - Tgt : 有很多办法可以在现有结构内，并利用可得到的时间和资金方面的资源做远比现在更多的事情。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : SIAC blocked the transfers despite memorandums of understanding from the two Governments that promised that suspects would not be tortured and would receive fair trials upon return.
+[src.callbacks.generation_monitor] - Tgt : 移民上诉特别委员会阻止了这两名人员的移送，尽管两国政府签署了《谅解备忘录》，保证嫌疑人在返回之后不会遭受酷刑并将受到公正审理
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : It ' s none of my business if he ' s gay or not
+[src.callbacks.generation_monitor] - Tgt : ぃgay闽иぐ或摆
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : b. Organization of regional awareness - raising activities to deepen the understanding of the value of environmental monitoring ;
+[src.callbacks.generation_monitor] - Tgt : b.开展提高区域认识的活动，以加深人们对环境监测重要性的认识；
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The Staff College ' s new statutes should allow it to obtain a firm financial commitment from its clients through the provision of high quality services ; it was therefore reasonable that it should be funded by the United Nations bodies to which it provided services.
+[src.callbacks.generation_monitor] - Tgt : 职员学院的新章程使它通过提供高质量的服务从其客户那里得到坚定的财政承诺，因此，由接受服务的联合国机构提供资金是合理的。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : A portion of such costs, which would have been borne by the General Fund, were released to be reprogrammed towards core diplomatic training activities.
+[src.callbacks.generation_monitor] - Tgt : 这些本来由普通基金承担的费用中的一部分已获准重订计划，用于核心外交培训活动。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The provision was that all citizens of the former GDR who had lost their jobs in the course of the German unification ( which includes also public servants who were not
+[src.callbacks.generation_monitor] - Tgt : 32.有关的规定是，所有前民德公民在德国统一过程中失去工作(也包括没有重新受到雇用的公务员)，根据他们的年龄，有权得到失业津贴
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Don ' t break him down. Just let him be.
+[src.callbacks.generation_monitor] - Tgt : 那就别打破它随它去吧
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : They should include specific information relating to the report or any other documentation and quality of the delegation in the introduction ; include in the concerns and recommendations section a clear connection between the concerns and recommendations, with recommendations concentrating on concrete proposals that should be as practical and precise as possible.
+[src.callbacks.generation_monitor] - Tgt : 结论意见在导言部分应包括与报告或任何其他文件有关的具体资料以及代表团的质量；在关切事项和建议一节清楚地把关切事项同建议联
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : There were also cases of excessive use of force and / or unusual means of restraint used by officers during the expulsion of foreign nationals from Sweden.
+[src.callbacks.generation_monitor] - Tgt : 而且还出现过官员在将外国国民赶出瑞典当中过度使用武力和(或)不正常的强制手段的情况。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00010385
+[src.solver] - === Epoch 14 Done | Train Loss: 6.4995 ===
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : For the purposes of article 50, paragraph 2, the Presidency shall authorize that an official language of the Court be used as a working language when :
+[src.callbacks.generation_monitor] - Tgt : 1.为了第五十条第二款的目的,在下述情况下,院长会议应准许使用本法院的一种正式语文为工作语文:
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Following a programmatic review of requests, in close collaboration with the Coordination and Response Division of the Office for the Coordination of Humanitarian Affairs, the Fund secretariat provides the Emergency Relief Coordinator with the information necessary to decide on grant allocations.
+[src.callbacks.generation_monitor] - Tgt : 在人道主义事务协调厅协调和反应司的密切协作下，基金秘书处对申请进行方案上的审查后，会向紧急救济协调员提供必要的资料，以确定赠
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : I know I deserve the worst.
+[src.callbacks.generation_monitor] - Tgt : 我知道我應該值得這樣
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Notes that the deliberate targeting of civilians and other protected persons, and the commission of systematic, flagrant and widespread violations of international humanitarian and human rights law in situations of armed conflict, may constitute a threat to international peace and security, and, reaffirms in this regard its
+[src.callbacks.generation_monitor] - Tgt : 26.注意到在武装冲突局势中蓄意针对平民和其他受保护人员以及系统地公然普遍违反国际人道主义法和人权法的行为，可能对国际和平与安
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Further reports ( A / 57 / 158 and Add. 1 and 2 and A / 58 / 125 ) were submitted to the General Assembly at its fifty - seventh and fifty - eighth sessions in response to resolution 56 / 186 of 21 December 2001, reflecting the responses of 29 Member States providing information on progress
+[src.callbacks.generation_monitor] - Tgt : 3.另外，还根据2001年12月21日第56/186号决议，向大会第五十七届和第五十八届会议提交了其他报告（A/57/158和Add.1和2及A/58
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Noting with satisfaction that the Mozambique ' s Presidential and Legislative elections held on 1 - 2 December, 2004, was carried out peacefully and in a transparent manner, which created conditions to reinforce democratic process and to continue to implementation of economic and social programmes ;
+[src.callbacks.generation_monitor] - Tgt : 满意地注意到2004年12月1日和2日以和平和透明方式举行的莫桑比克总统和议会选举，这为加强民主进程和继续执行经济和社会方案创造了条
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : With that in mind, we welcomed the United States proposals for improving the functioning of the oil - for - food programme.
+[src.callbacks.generation_monitor] - Tgt : 在此基础上，我们欢迎美国有关改进石油换粮食方案运作的提议。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : My delegation also commends the report presented by the Secretary - General ( A / 58 / 352 ) on the implementation of the recommendations contained in the report on the causes of conflict and the promotion of durable peace and sustainable development.
+[src.callbacks.generation_monitor] - Tgt : 我国代表团还赞赏秘书长提交的有关冲突起因和促进持久和平与可持续发展的报告所载各项建议执行情况的报告（A/58/352）。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : On its part, the Islamic Republic of Iran, following thorough and proficient studies and considerations, has carefully prepared a package containing important initiatives and proposals in different political, security, economic and nuclear fields, to be submitted to the countries of the 5 + 1 Group.
+[src.callbacks.generation_monitor] - Tgt : 伊朗伊斯兰共和国方面经过深入透彻的研究和考虑之后，认真编写了一项一揽子计划，提交给5加1集团的国家，其中载有不同政治、安全、
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The purpose of the provisions of the law on priority is to :
+[src.callbacks.generation_monitor] - Tgt : 法律关于优先权的各项条文的目的是：
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00007408
+[src.solver] - === Epoch 15 Done | Train Loss: 6.4992 ===
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : The President ( spoke in French ) : I now call on His Excellency Mr. Luis Ernesto Derbez, Minister for Foreign Affairs of Mexico.
+[src.callbacks.generation_monitor] - Tgt : 主席（以法语发言）：我现在请墨西哥外交部长路易斯·埃内斯托·德尔贝先生阁下发言。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Bad things happen to people who kill their family with a hammer.
+[src.callbacks.generation_monitor] - Tgt : 我赔钱但不服气战果很接近
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : ( f ) Property shall mean assets of every kind, whether corporeal or incorporeal, movable or immovable, tangible or intangible, and legal documents or instruments evidencing title to or interest in such assets ;
+[src.callbacks.generation_monitor] - Tgt : (f)财产系指各种资产，不论是物质的还是非物质的、动产还是不动产、有形的还是无形的，以及证明对这种资产的产权或者权益的法
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The Ugandan Minister alleged in his statement to the Council that the objective of the remaining Ugandan forces in the Democratic Republic of the Congo was to ensure that the forces of the Democratic Alliance, that are supported by the Sudan and trained by al - Qa idah, did not obtain assistance for the purpose
+[src.callbacks.generation_monitor] - Tgt : 乌干达外长在安理会的发言中宣称，乌干达部队滞留刚果民主共和国的目的是确保不让由苏丹支助、由基地组织训练的民主联盟部队得到
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : In the Democratic Republic of the Congo, MONUC conducted research on the situation of women in the National Police Force.
+[src.callbacks.generation_monitor] - Tgt : 53.在刚果民主共和国，联刚特派团研究妇女在国家警察部队中的境况。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The only defence against a nuclear catastrophe is the total elimination of those weapons.
+[src.callbacks.generation_monitor] - Tgt : 防范核灾难的唯一途径就是彻底销毁这些武器。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : But it ' ll be different foryou, Sibyl, and that makes me very unhappy.
+[src.callbacks.generation_monitor] - Tgt : 但对你来说不一样Sibyl,这让我很不开心
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The Democratic Republic of the Congo secured Naples terms relief involving a 67 per cent debt service reduction in present value terms pending achievement of the HIPC decision point.
+[src.callbacks.generation_monitor] - Tgt : 刚果民主共和国已经确保获得根据那不勒斯条件的减免，即待其达到重债穷国倡议决定点后获得67%的偿债减免。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Perfect! OK.
+[src.callbacks.generation_monitor] - Tgt : 棒极了!
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Costello!
+[src.callbacks.generation_monitor] - Tgt : 高德乐！
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00004865
+[src.solver] - === Epoch 16 Done | Train Loss: 6.4991 ===
+[src.callbacks.checkpoint] - New Best Model! Loss: 6.4960 -> 6.4959
+[src.callbacks.checkpoint] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/13-48-23/checkpoints/checkpoint_best.pt
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : At the same time that Dr. Samuel Mudd is tending to John Wilkes Booth, 50 kilometers away, Abraham Lincoln is dying.
+[src.callbacks.generation_monitor] - Tgt : 在塞缪尔・马德医治布斯的同时50公里外的林肯已濒临死亡
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Why?
+[src.callbacks.generation_monitor] - Tgt : 拍什么？
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : I call upon the Security Council to condemn Ethiopia ' s invasion of Eritrea and its crimes on the Eritrean people, to demand Ethiopia ' s immediate and unconditional withdrawal from sovereign Eritrean territory and to take punitive action against Ethiopia until it complies.
+[src.callbacks.generation_monitor] - Tgt : 我呼吁安全理事会谴责埃塞俄比亚入侵厄立特里亚及其对厄立特里亚人民犯下的罪行，要求埃塞俄比亚立即和无条件地从撤离主权的厄立特里
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Summary record of the 39th meeting
+[src.callbacks.generation_monitor] - Tgt : 第39次会议简要记录
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : We would like to add our voice to those who have expressed concern about the recent public visit with Slobodan Milosevic of two ambassadors from the Security Council while on a fact - finding mission to Kosovo.
+[src.callbacks.generation_monitor] - Tgt : 最近，安全理事会两名大使在前往科索沃的一次实况调查任务期间公开访问了斯洛博丹·米洛舍维奇，一些人对此事表示了关注，我们也要对
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : And the suspects?
+[src.callbacks.generation_monitor] - Tgt : 而犯罪嫌疑人？
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Ah... l like...
+[src.callbacks.generation_monitor] - Tgt : ...我喜欢...
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Fifth report of the Advisory Committee on Administrative and Budgetary Questions
+[src.callbacks.generation_monitor] - Tgt : 行政和预算问题咨询委员会的第五次报告
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Dude, what the fuck?!
+[src.callbacks.generation_monitor] - Tgt : 老大，是怎樣啦？
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Agenda item 38 : Permanent sovereignty of the Palestinian people in the Occupied Palestinian Territory, including East Jerusalem, and of the Arab population in the occupied Syrian Golan over their natural resources ( continued ) ( A / C. 2 / 60 / L. 11 )
+[src.callbacks.generation_monitor] - Tgt : 议程项目38：包括东耶路撒冷在内的被占领巴勒斯坦领土上的巴勒斯坦人民和被占领叙利亚戈兰的阿拉伯人民对其自然资源的永久主权（续）
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00002819
+[src.solver] - === Epoch 17 Done | Train Loss: 6.4990 ===
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : Freeze frame on it. Then cut to me at the trial.
+[src.callbacks.generation_monitor] - Tgt : 停格，不需要等到他开口
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Informal briefing for members of the Special Committee on Peacekeeping on the development of a peacekeeping doctrine, including an update on the work on peacekeeping terminology conducted by the Peacekeeping Best Practices Section ( organized by the Department of Peacekeeping Operations )
+[src.callbacks.generation_monitor] - Tgt : 为维持和平行动特别委员会成员就维持和平理论制订情况，包括维持和平最佳做法科所做的维持和平词汇工作最新情况举行非正式简报会（由
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : In medical and veterinary sciences, the development of diagnostics, vaccines and other biopharmaceuticals is broadening the ability to manage diseases that were until very recently considered as incurable.
+[src.callbacks.generation_monitor] - Tgt : 在医学和兽医科学方面，诊断法、免疫和其他生物制药的研制，增强了对一些直至近期还被认为无法抑制的疾病实行管理的能力。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The Committee further urges the State party to study the behavioural patterns of communities, and of women in particular, that inhibit their utilization of existing services and to take appropriate action.
+[src.callbacks.generation_monitor] - Tgt : 委员会进一步促请该缔约国研究妨碍妇女利用各项现有服务的社区的、特别是妇女的行为模式，并对此采取适当行动。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Table A3. 1. 1 Hazard statement codes for physical hazards
+[src.callbacks.generation_monitor] - Tgt : 表A3.1.1物理危险的危险说明代码
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The information submitted by the Member States has been used in the preparation of the present report.
+[src.callbacks.generation_monitor] - Tgt : 成员国提交的资料已经在编写本报告过程中得到采用。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The members of CEB had noted with satisfaction that those recommendations had the full support of all the members of the Panel, including the Chairman of ICSC, whose experience and knowledge of the functioning of the Commission had been extremely helpful.
+[src.callbacks.generation_monitor] - Tgt : 65.行政首长协调会成员满意地注意到那些建议获得小组所有成员，包括公务员制度委员会主席的全力支持；公务员制度委员会主席对委员会
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The lack of effective basic border management directly affects the joint efforts of the Haitian authorities and MINUSTAH to enhance security, the rule of law and institutional support.
+[src.callbacks.generation_monitor] - Tgt : 18.由于缺乏基本的有效边境管理，海地当局和联海稳定团加强安全、法治和机构支助的共同努力受到直接影响。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : - What do you mean? - When you cut them.
+[src.callbacks.generation_monitor] - Tgt : 你这是在说什么?
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Also in February 2007, she had chaired the sixth session of the Inter - Agency Network on Women and Gender Equality, which had brought together senior gender focal points from all United Nations entities.
+[src.callbacks.generation_monitor] - Tgt : 2007年2月，她还主持了机构间妇女和两性平等网络第六届会议，该网络将联合国各个实体的高级性别问题协调中心汇聚在一起。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00001321
+[src.solver] - === Epoch 18 Done | Train Loss: 6.4989 ===
+[src.callbacks.checkpoint] - New Best Model! Loss: 6.4959 -> 6.4957
+[src.callbacks.checkpoint] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/13-48-23/checkpoints/checkpoint_best.pt
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : Yo, East highland, you know GiI Harris.
+[src.callbacks.generation_monitor] - Tgt : 东高地高中的同学们你们都认识吉尔哈利斯
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : ( Signed ) Makmur Widodo Chargé d ' affaires a. i.
+[src.callbacks.generation_monitor] - Tgt : 马克穆尔·维多多（签名）
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : I need to finish reading " Don Quixote ".
+[src.callbacks.generation_monitor] - Tgt : 我得读完《堂吉诃德》
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Myanmar strongly believes in the United Nations and the multilateralism it represents as the best guarantee of global peace and security.
+[src.callbacks.generation_monitor] - Tgt : 缅甸十分信赖联合国和多边主义，它是全球和平与安全的最佳保证。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Brazil is party to a number of treaties and conventions against terrorism in the context of the United Nations and of the Organization of American States, such as
+[src.callbacks.generation_monitor] - Tgt : 《关于防止和惩处侵害应受国际保护人员的罪行的公约》；
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : An interesting trend was the increase in services to governments from 7. 2 per cent of total revenues to 14. 8 per cent.
+[src.callbacks.generation_monitor] - Tgt : 20.向各国政府提供的服务有所增加，从占收入总额的7.2％增至14.8％，这是一个引人注意的趋势。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : We are convinced that military means for resolving the Congo problem do not exist.
+[src.callbacks.generation_monitor] - Tgt : 我们深信，解决刚果问题的军事手段是不存在的。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : A 2004 CCA report noted that 55 ethnic groups account for 8. 4 per cent of China ' s total population but make up more than 40 per cent of its absolute poor.
+[src.callbacks.generation_monitor] - Tgt : 39.一份2004年共同国家评估报告注意到，55个少数民族占中国总人口的8.4%，却占绝对贫困人口的40%。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : I don ' t want to hide.
+[src.callbacks.generation_monitor] - Tgt : 我要公之于众
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The United Nations Children ' s Fund ( UNICEF ) continued to organize support for child ex - combatants, while the World Food Programme ( WFP ) continued vital food support for the disarmament, demobilization and reintegration sites.
+[src.callbacks.generation_monitor] - Tgt : 29.联合国儿童基金会（儿童基金会）为前战斗人员中的儿童安排支助，世界粮食计划署（粮食计划署）继续为营地供应必要的粮食。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00000407
+[src.solver] - === Epoch 19 Done | Train Loss: 6.4987 ===
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Src : Tell them that yes, we will negotiate.
+[src.callbacks.generation_monitor] - Tgt : 告诉他们可以，我们同意妥协
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The settlement should provide mechanisms to ensure the participation of all Kosovo communities in government, both on the central and on the local level.
+[src.callbacks.generation_monitor] - Tgt : 4.地位问题的解决应提供各种机制，确保科索沃各族裔参与中央和地方一级政府的工作。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : UNCTAD, Geneva, 1995.
+[src.callbacks.generation_monitor] - Tgt : 贸发会议，日内瓦，1995年。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Ministers re - emphasised that people smuggling, trafficking in persons and other transnational crimes threatened regional security and prosperity.
+[src.callbacks.generation_monitor] - Tgt : 33.部长们再次强调私运和贩卖人口及其他跨国犯罪威胁区域安全与繁荣。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : That was quite a ride.
+[src.callbacks.generation_monitor] - Tgt : 一路那个闹腾啊
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : This is an area that requires greater international assistance.
+[src.callbacks.generation_monitor] - Tgt : 这是需要更多国际援助的一个领域。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : ( Signed ) Makmur Widodo Chargé d ' affaires a. i.
+[src.callbacks.generation_monitor] - Tgt : 马克穆尔·维多多（签名）
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The State party is also encouraged to withdraw its reservation to article 22.
+[src.callbacks.generation_monitor] - Tgt : 委员会并鼓励缔约国撤消其对《公约》第二十二条的保留。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : One of the ways of eradicating acts of torture has been the draft reform of the Criminal Code and the Code of Criminal Procedure.
+[src.callbacks.generation_monitor] - Tgt : 根除酷刑的途径之一是改革《刑法》和《刑事诉讼法》。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : I assure him of the full support and cooperation of the Nigerian delegation as he leads the deliberations of the session.
+[src.callbacks.generation_monitor] - Tgt : 我向他保证，在他领导会议审议工作中，尼日利亚代表团将给予全力支持和配合。
+[src.callbacks.generation_monitor] - Pred: [Empty]
+[src.callbacks.generation_monitor] - --------------------
+[src.solver] - LR updated to: 0.00000100
+[src.solver] - Training Finished.

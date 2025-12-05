@@ -1,0 +1,27 @@
+{"time":"2025-12-04T01:13:34.040813062+08:00","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2025-12-04T01:13:35.091413301+08:00","level":"INFO","msg":"stream: created new stream","id":"gp3w6r39"}
+{"time":"2025-12-04T01:13:35.091599281+08:00","level":"INFO","msg":"handler: started","stream_id":"gp3w6r39"}
+{"time":"2025-12-04T01:13:35.091896969+08:00","level":"INFO","msg":"stream: started","id":"gp3w6r39"}
+{"time":"2025-12-04T01:13:35.091942982+08:00","level":"INFO","msg":"sender: started","stream_id":"gp3w6r39"}
+{"time":"2025-12-04T01:13:35.091928305+08:00","level":"INFO","msg":"writer: started","stream_id":"gp3w6r39"}
+{"time":"2025-12-04T03:13:33.836232282+08:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/graphql","body":"{\"errors\":[{\"message\":\"context deadline exceeded\",\"path\":[\"project\",\"run\"]}],\"data\":{\"project\":{\"run\":null}}}"}
+{"time":"2025-12-04T03:13:57.853225491+08:00","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/graphql","body":"{\"errors\":[{\"message\":\"context deadline exceeded\",\"path\":[\"project\",\"run\"]}],\"data\":{\"project\":{\"run\":null}}}"}
+{"time":"2025-12-04T03:21:17.824604842+08:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/wsincos1025/hydra-style-transformer/gp3w6r39/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-12-04T03:34:09.996150735+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-12-04T06:44:15.378103569+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":2952}
+{"time":"2025-12-04T06:44:15.681535443+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":12}
+{"time":"2025-12-04T07:39:12.844583293+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3443}
+{"time":"2025-12-04T07:39:13.21564603+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":12}
+{"time":"2025-12-04T07:44:09.065176176+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/wsincos1025/hydra-style-transformer/gp3w6r39/file_stream\": read tcp 10.208.40.40:36132->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-12-04T08:34:13.242849858+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3935}
+{"time":"2025-12-04T08:34:13.652162611+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":13}
+{"time":"2025-12-04T09:11:59.559980089+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/wsincos1025/hydra-style-transformer/gp3w6r39/file_stream\": unexpected EOF"}
+{"time":"2025-12-04T09:29:14.203573287+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4428}
+{"time":"2025-12-04T09:29:14.669518221+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":13}
+{"time":"2025-12-04T09:56:48.160024397+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/wsincos1025/hydra-style-transformer/gp3w6r39/file_stream\": unexpected EOF"}
+{"time":"2025-12-04T11:19:15.529983089+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5412}
+{"time":"2025-12-04T11:19:15.922646575+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":13}
+{"time":"2025-12-04T14:04:26.500669448+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":6891}
+{"time":"2025-12-04T14:04:26.891815158+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":13}
+{"time":"2025-12-04T17:28:24.396773501+08:00","level":"INFO","msg":"stream: closing","id":"gp3w6r39"}
+{"time":"2025-12-04T17:28:25.922964346+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}

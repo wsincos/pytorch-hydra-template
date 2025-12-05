@@ -450,7 +450,7 @@ class Callback:
 ## 6. train.py
 `train.py` 负责实例化`hydra`与`solver`
 
-```
+```python
 @hydra.main(version_base=None, config_path="conf", config_name="config")
 def main(cfg: DictConfig):
     
@@ -475,7 +475,7 @@ def main(cfg: DictConfig):
 
 在完成实验以后，即可通过
 
-```python
+```bash
 python train.py
 ```
 
@@ -483,7 +483,7 @@ python train.py
 
 ## Appendix
 for test：
-```
+```bash
 CUDA_VISIBLE_DEVICES=6 python train.py train.epochs=3 dataset.max_samples=500 logger.name="test_run_03" callback.training_monitor.params.log_every_n_steps=50 dataset.batch_size=32
 ```
 

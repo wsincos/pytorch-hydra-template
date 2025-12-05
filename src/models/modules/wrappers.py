@@ -41,26 +41,39 @@ class Seq2SeqWrapper(nn.Module):
         finished = torch.zeros(batch_size, dtype=torch.bool).to(device)
 
         # 3. 自回归循环
+        # 使用 top-k 采样替代纯贪婪搜索，减少重复高频token（例如标点或常用单字）
+        top_k = 5
+        temperature = 1.0
         for _ in range(max_len):
             # 将当前已生成的序列送入 Decoder
-            # 这里的效率其实可以优化（使用 cache），但为了代码简单先这样写
             out = self.decoder(ys, memory)
-            
-            # 取最后一个时间步的输出: [Batch, VocabSize]
-            prob = out[:, -1]
-            
-            # 贪婪搜索：取概率最大的词: [Batch]
-            _, next_word = torch.max(prob, dim=1)
-            
+            # 取最后一个时间步的logits: [Batch, VocabSize]
+            logits = out[:, -1]
+
+            # 温度缩放
+            if temperature != 1.0:
+                logits = logits / temperature
+
+            # top-k 采样
+            if top_k > 0:
+                topk_vals, topk_idx = torch.topk(logits, k=top_k, dim=1)
+                probs = torch.softmax(topk_vals, dim=1)
+                # 从 top-k 分布中采样一个词
+                sampled = torch.multinomial(probs, num_samples=1).squeeze(1)
+                next_word = topk_idx.gather(1, sampled.unsqueeze(1)).squeeze(1)
+            else:
+                # 退回到贪婪策略
+                _, next_word = torch.max(logits, dim=1)
+
             # 如果某个样本已经结束了，就让它一直生成 EOS (作为 Padding)
             next_word = torch.where(finished, torch.tensor(eos_token_id).to(device), next_word)
-            
+
             # 更新结束状态
             finished |= (next_word == eos_token_id)
-            
+
             # 拼接到结果后面: [Batch, CurrLen + 1]
             ys = torch.cat([ys, next_word.unsqueeze(1)], dim=1)
-            
+
             # 如果所有样本都结束了，提前退出
             if finished.all():
                 break
@@ -71,3 +84,4 @@ class Seq2SeqWrapper(nn.Module):
             
         # 返回结果 (去掉第一列的 BOS)
         return ys[:, 1:]
+    

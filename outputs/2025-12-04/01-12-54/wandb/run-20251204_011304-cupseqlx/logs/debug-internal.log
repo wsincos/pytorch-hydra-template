@@ -1,0 +1,7 @@
+{"time":"2025-12-04T01:13:05.144002021+08:00","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2025-12-04T01:13:06.384692661+08:00","level":"INFO","msg":"stream: created new stream","id":"cupseqlx"}
+{"time":"2025-12-04T01:13:06.384824579+08:00","level":"INFO","msg":"handler: started","stream_id":"cupseqlx"}
+{"time":"2025-12-04T01:13:06.384934215+08:00","level":"INFO","msg":"stream: started","id":"cupseqlx"}
+{"time":"2025-12-04T01:13:06.384975251+08:00","level":"INFO","msg":"writer: started","stream_id":"cupseqlx"}
+{"time":"2025-12-04T01:13:06.384972247+08:00","level":"INFO","msg":"sender: started","stream_id":"cupseqlx"}
+{"time":"2025-12-04T01:13:06.386361493+08:00","level":"INFO","msg":"stream: closing","id":"cupseqlx"}

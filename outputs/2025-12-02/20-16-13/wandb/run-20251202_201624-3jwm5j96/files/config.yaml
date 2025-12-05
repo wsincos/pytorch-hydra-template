@@ -1,0 +1,211 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            3n0hl8h37oma84a628j73rmulj3xgqey:
+                args:
+                    - train.epochs=3
+                    - dataset.max_samples=500
+                    - logger.name=test_run_03
+                    - callback.training_monitor.params.log_every_n_steps=50
+                    - dataset.batch_size=32
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 52
+                cpu_count_logical: 104
+                cudaVersion: "11.6"
+                disk:
+                    /:
+                        total: "1967317549056"
+                        used: "345755844608"
+                email: wsincos1025@gmail.com
+                executable: /data1/jinyu_wang/miniconda3/envs/transformer/bin/python
+                git:
+                    commit: 7414259c89b74214456a6d162bdd117c969fed88
+                    remote: https://github.com/wsincos/pytorch-hydra-template.git
+                gpu: NVIDIA GeForce RTX 3090
+                gpu_count: 8
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-f039e32e-1aef-6d10-5f7f-4fd151215f4c
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-d768412c-1a2a-f846-d7e8-1d407b170b50
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-8e6ba9fd-53c6-b34b-dfcc-311c007be7e3
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-cefe01ff-96a1-54b9-48b7-96bda3ef9320
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-62999ca0-3a53-5b17-e517-30fc47cfe22b
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-c60da3e8-0ede-0ec4-ce9e-c0db622d86ed
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-c44ee889-de33-f21d-e310-a6ef43c0d559
+                    - architecture: Ampere
+                      cudaCores: 10496
+                      memoryTotal: "25769803776"
+                      name: NVIDIA GeForce RTX 3090
+                      uuid: GPU-c657432c-310c-ea84-2adb-df23c72e194c
+                host: aa-ESC8000-G4
+                memory:
+                    total: "540615307264"
+                os: Linux-5.15.0-105-generic-x86_64-with-glibc2.31
+                program: /data1/jinyu_wang/projects/pytorch-hydra/train.py
+                python: CPython 3.9.25
+                root: /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-02/20-16-13
+                startedAt: "2025-12-02T12:16:24.815271Z"
+                writerId: 3n0hl8h37oma84a628j73rmulj3xgqey
+        m: []
+        python_version: 3.9.25
+        t:
+            "1":
+                - 1
+                - 11
+                - 49
+                - 50
+                - 51
+            "2":
+                - 1
+                - 11
+                - 49
+                - 50
+                - 51
+            "3":
+                - 13
+                - 15
+                - 16
+                - 61
+            "4": 3.9.25
+            "5": 0.23.0
+            "6": 4.57.3
+            "12": 0.23.0
+            "13": linux-x86_64
+callback:
+    value:
+        ckpt:
+            name: CheckpointCallback
+            params:
+                keep_last: true
+                save_every: 1
+        early_stop:
+            name: EarlyStopping
+            params:
+                min_delta: 0.001
+                patience: 3
+        training_monitor:
+            name: TrainingMonitor
+            params:
+                log_every_n_steps: 50
+        translation_monitor:
+            name: TranslationMonitor
+            params:
+                num_samples: 10
+checkpoint:
+    value:
+        enabled: true
+        save_dir: checkpoints
+criterion:
+    value:
+        name: CrossEntropyLoss
+dataset:
+    value:
+        batch_size: 32
+        max_samples: 500
+        name: Opus100Dataset
+        num_workers: 8
+        seq_len: 64
+        source_lang: en
+        target_lang: zh
+        test_path: ./data/datasets/opus-100/test/test-00000-of-00001.parquet
+        tokenizer_path: ./data/pretrained_models/bert-base-multilingual-cased
+        train_path: ./data/datasets/opus-100/train/train-00000-of-00001.parquet
+logger:
+    value:
+        enable: true
+        entity: null
+        group: null
+        mode: online
+        name: test_run_03
+        notes: null
+        project: hydra-style-transformer
+        tags:
+            - opus
+            - transformer
+model:
+    value:
+        arch:
+            decoder:
+                d_model: 512
+                name: TransformerDecoder
+                nhead: 8
+                num_layers: 6
+                output_dim: 119547
+                pe_cfg:
+                    d_model: 512
+                    dropout: 0.1
+                    max_len: 5000
+                    name: SinusoidalPE
+            encoder:
+                d_model: 512
+                input_dim: 119547
+                name: TransformerEncoder
+                nhead: 8
+                num_layers: 6
+                pe_cfg:
+                    d_model: 512
+                    dropout: 0.1
+                    max_len: 5000
+                    name: SinusoidalPE
+        name: seq2seq_transformer
+        shared:
+            d_model: 512
+            pe_cfg:
+                d_model: 512
+                dropout: 0.1
+                max_len: 5000
+                name: SinusoidalPE
+            src_vocab_size: 119547
+            tgt_vocab_size: 119547
+        wrapper:
+            name: Seq2SeqWrapper
+optimizer:
+    value:
+        name: AdamW
+        params:
+            betas:
+                - 0.9
+                - 0.999
+            eps: 1e-08
+            lr: 0.0005
+            weight_decay: 0.01
+scheduler:
+    value:
+        name: CosineAnnealingLR
+        params:
+            T_max: 3
+            eta_min: 1e-06
+train:
+    value:
+        device: cuda
+        epochs: 3
+        seed: 42

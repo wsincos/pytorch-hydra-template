@@ -20,6 +20,7 @@ arch:
     name: TransformerEncoder
     input_dim: ${model.shared.src_vocab_size}
     d_model: ${model.shared.d_model}
+    dim_feedforward: 
     nhead: 8
     num_layers: 6
     pe_cfg: ${model.shared.pe_cfg}
@@ -29,6 +30,7 @@ arch:
     name: TransformerDecoder
     output_dim: ${model.shared.tgt_vocab_size}
     d_model: ${model.shared.d_model}
+    dim_feedforward: 
     nhead: 8
     num_layers: 6
     pe_cfg: ${model.shared.pe_cfg}

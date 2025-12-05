@@ -6,12 +6,13 @@ defaults:
   - criterion: ce          # 加载 conf/criterion/ce.yaml
   - logger: wandb          # 加载 conf/logger/wandb.yaml
   - callback: default      # 加载 conf/callback/default.yaml
-  - scheduler: cosine
+  - scheduler: onecycle
 
 train:
   seed: 42
   device: cuda             # 环境支持 CUDA，直接用显卡跑
   epochs: 20               # 15-20轮即可
+  use_amp: false            # 使用混合精度训练
 
 
 checkpoint:

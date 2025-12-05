@@ -30,6 +30,7 @@ import torch
 import wandb
 from omegaconf import OmegaConf
 from hydra.core.hydra_config import HydraConfig
+from torch.cuda.amp import autocast, GradScaler
 
 import src.callbacks
 from src.utils.common import dict_from_config
@@ -49,6 +50,12 @@ class Solver:
         seed_everything(cfg.train.seed)
         register_standard_components()
         self.device = torch.device(cfg.train.device)
+
+        # 混合精度训练
+        self.use_amp = cfg.train.get('use_amp', False) if torch.cuda.is_available() else False
+        if self.use_amp:
+            self.scaler = GradScaler()
+            logger.info("Mixed Precision Training (AMP) enabled.")
 
         # 状态变量
         self.epoch = 0
@@ -93,8 +100,13 @@ class Solver:
         self.criterion = loss_cls(ignore_index=0, **cfg.criterion.params)
         
         self.scheduler = None
+        steps_per_epoch = len(self.train_loader)
+        total_steps = steps_per_epoch * self.cfg.train.epochs
+
         if "scheduler" in cfg and cfg.scheduler is not None:
             sched_cls = SCHEDULER_REGISTRY.get(cfg.scheduler.name)
+            if cfg.scheduler.name == "OneCycleLR":
+                cfg.scheduler.params["total_steps"] = total_steps
             self.scheduler = sched_cls(self.optimizer, **(cfg.scheduler.params or {}))
         
 
@@ -184,14 +196,27 @@ class Solver:
         x, y = x.to(self.device), y.to(self.device)
         tgt_input = y[:, :-1]
         tgt_label = y[:, 1:]
-        logits = self.model(x, tgt_input)
-        loss = self.criterion(logits.reshape(-1, logits.shape[-1]), tgt_label.reshape(-1))
+        
+        # 使用混合精度前向传播
+        with autocast(enabled=self.use_amp):
+            logits = self.model(x, tgt_input)
+            loss = self.criterion(logits.reshape(-1, logits.shape[-1]), tgt_label.reshape(-1))
         
         if self.model.training:
             self.optimizer.zero_grad()
-            loss.backward()
-            torch.nn.utils.clip_grad_norm_(self.model.parameters(), max_norm=1.0)
-            self.optimizer.step()
+            
+            if self.use_amp:
+                # 混合精度反向传播和优化器更新
+                self.scaler.scale(loss).backward()
+                self.scaler.unscale_(self.optimizer)
+                torch.nn.utils.clip_grad_norm_(self.model.parameters(), max_norm=1.0)
+                self.scaler.step(self.optimizer)
+                self.scaler.update()
+            else:
+                # 标准反向传播
+                loss.backward()
+                torch.nn.utils.clip_grad_norm_(self.model.parameters(), max_norm=1.0)
+                self.optimizer.step()
 
             self.global_step += 1
 
@@ -206,8 +231,8 @@ class Solver:
             total_loss += loss
         avg_loss = total_loss / len(self.test_loader)
         
-        if self.cfg.logger.enable:
-            wandb.log({"test/loss": avg_loss, "epoch": self.epoch})
+        # if self.cfg.logger.enable:
+        #     wandb.log({"test/loss": avg_loss}, step=self.epoch)
         
         # 更新状态供 Callback 读取
         self.test_loss = avg_loss
@@ -238,10 +263,15 @@ class Solver:
                 #     logger.info(f"Epoch {epoch} | Step {i} | Train Loss: {loss:.4f}")
                 #     if self.cfg.logger.enable:
                 #         wandb.log({"train/step_loss": loss})
+
+                if self.scheduler is not None and self.cfg.scheduler.name == "OneCycleLR":
+                    self.scheduler.step()
+                    # 触发 Monitor 记录 LR (变成 Step 级记录，曲线更平滑)
+                    self.trigger_callbacks("on_scheduler_step")
             
             avg_train_loss = total_loss / len(self.train_loader)
             self.train_loss = avg_train_loss
-            logger.info(f"=== Epoch {epoch} Done | Train Loss: {avg_train_loss:.4f} ===")
+            # logger.info(f"=== Epoch {epoch} Done | Train Loss: {avg_train_loss:.4f} ===")
             # if self.cfg.logger.enable:
             #     wandb.log({"train/epoch_loss": avg_train_loss, "epoch": epoch})
             
@@ -260,7 +290,7 @@ class Solver:
                 break
 
             # --- 学习率更新 ---
-            if self.scheduler:
+            if self.scheduler is not None and self.cfg.scheduler.name != "OneCycleLR":
                 self.scheduler.step()
                 lr = self.scheduler.get_last_lr()[0]
                 logger.info(f"LR updated to: {lr:.8f}")

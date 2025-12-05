@@ -1,0 +1,20 @@
+{"time":"2025-12-04T17:42:15.683974266+08:00","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2025-12-04T17:42:16.706794903+08:00","level":"INFO","msg":"stream: created new stream","id":"9xijp6wx"}
+{"time":"2025-12-04T17:42:16.706921653+08:00","level":"INFO","msg":"handler: started","stream_id":"9xijp6wx"}
+{"time":"2025-12-04T17:42:16.707111809+08:00","level":"INFO","msg":"stream: started","id":"9xijp6wx"}
+{"time":"2025-12-04T17:42:16.707130917+08:00","level":"INFO","msg":"sender: started","stream_id":"9xijp6wx"}
+{"time":"2025-12-04T17:42:16.707153725+08:00","level":"INFO","msg":"writer: started","stream_id":"9xijp6wx"}
+{"time":"2025-12-04T21:30:49.819378036+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/wsincos1025/hydra-style-transformer/9xijp6wx/file_stream\": unexpected EOF"}
+{"time":"2025-12-05T02:57:10.708985796+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5342}
+{"time":"2025-12-05T02:57:10.878473867+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":7}
+{"time":"2025-12-05T03:52:44.309312888+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":5869}
+{"time":"2025-12-05T03:52:44.684785449+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":13}
+{"time":"2025-12-05T04:12:29.314130602+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-12-05T04:23:59.370625104+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-12-05T05:46:02.942243204+08:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/wsincos1025/hydra-style-transformer/9xijp6wx/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-12-05T09:03:48.960213695+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-12-05T11:15:57.284696703+08:00","level":"INFO","msg":"stream: closing","id":"9xijp6wx"}
+{"time":"2025-12-05T11:16:01.286925986+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-12-05T11:16:02.458660154+08:00","level":"INFO","msg":"handler: closed","stream_id":"9xijp6wx"}
+{"time":"2025-12-05T11:16:02.458815696+08:00","level":"INFO","msg":"sender: closed","stream_id":"9xijp6wx"}
+{"time":"2025-12-05T11:16:02.45883146+08:00","level":"INFO","msg":"stream: closed","id":"9xijp6wx"}

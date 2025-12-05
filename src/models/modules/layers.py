@@ -66,3 +66,29 @@ class LearnablePE(nn.Module):
         # 查表得到位置向量并叠加
         x = x + self.pe(positions)
         return self.dropout(x)
+
+
+
+def xavier_init_weights(m):
+    """
+    Transformer 的标准初始化策略 (Xavier Uniform)
+    适用于: Linear, Embedding, LayerNorm
+    """
+    if isinstance(m, nn.Linear):
+        # 线性层：Xavier Uniform 初始化权重，Bias 置 0
+        nn.init.xavier_uniform_(m.weight)
+        if m.bias is not None:
+            nn.init.constant_(m.bias, 0)
+            
+    elif isinstance(m, nn.Embedding):
+        # Embedding 层：通常用正态分布，方差较小
+        # 或者也可以用 xavier_uniform，这里选用 Normal(0, 1) 也是常见的
+        nn.init.normal_(m.weight, mean=0, std=0.1)
+        # 如果有 padding_idx，PyTorch 默认会处理，但手动置0更安全
+        if m.padding_idx is not None:
+            nn.init.constant_(m.weight[m.padding_idx], 0)
+            
+    elif isinstance(m, nn.LayerNorm):
+        # LayerNorm：权重置 1，Bias 置 0
+        nn.init.constant_(m.bias, 0)
+        nn.init.constant_(m.weight, 1.0)

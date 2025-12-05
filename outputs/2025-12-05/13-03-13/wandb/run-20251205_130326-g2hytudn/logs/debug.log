@@ -1,0 +1,36 @@
+2025-12-05 13:03:26,316 INFO    MainThread:1690151 [wandb_setup.py:_flush():80] Current SDK version is 0.23.0
+2025-12-05 13:03:26,316 INFO    MainThread:1690151 [wandb_setup.py:_flush():80] Configure stats pid to 1690151
+2025-12-05 13:03:26,316 INFO    MainThread:1690151 [wandb_setup.py:_flush():80] Loading settings from /data1/jinyu_wang/.config/wandb/settings
+2025-12-05 13:03:26,316 INFO    MainThread:1690151 [wandb_setup.py:_flush():80] Loading settings from /data1/jinyu_wang/projects/pytorch-hydra/wandb/settings
+2025-12-05 13:03:26,316 INFO    MainThread:1690151 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2025-12-05 13:03:26,316 INFO    MainThread:1690151 [wandb_init.py:setup_run_log_directory():713] Logging user logs to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-05/13-03-13/wandb/run-20251205_130326-g2hytudn/logs/debug.log
+2025-12-05 13:03:26,316 INFO    MainThread:1690151 [wandb_init.py:setup_run_log_directory():714] Logging internal logs to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-05/13-03-13/wandb/run-20251205_130326-g2hytudn/logs/debug-internal.log
+2025-12-05 13:03:26,316 INFO    MainThread:1690151 [wandb_init.py:init():840] calling init triggers
+2025-12-05 13:03:26,316 INFO    MainThread:1690151 [wandb_init.py:init():845] wandb.init called with sweep_config: {}
+config: {'train': {'seed': 42, 'device': 'cuda', 'epochs': 20}, 'checkpoint': {'enabled': True, 'save_dir': 'checkpoints'}, 'model': {'name': 'seq2seq_transformer', 'wrapper': {'name': 'Seq2SeqWrapper'}, 'shared': {'src_vocab_size': 119547, 'tgt_vocab_size': 119547, 'd_model': 512, 'pe_cfg': {'name': 'SinusoidalPE', 'd_model': 512, 'dropout': 0.1, 'max_len': 5000}}, 'arch': {'encoder': {'name': 'TransformerEncoder', 'input_dim': 119547, 'd_model': 512, 'dim_feedforward': None, 'nhead': 8, 'num_layers': 6, 'pe_cfg': {'name': 'SinusoidalPE', 'd_model': 512, 'dropout': 0.1, 'max_len': 5000}}, 'decoder': {'name': 'TransformerDecoder', 'output_dim': 119547, 'd_model': 512, 'dim_feedforward': None, 'nhead': 8, 'num_layers': 6, 'pe_cfg': {'name': 'SinusoidalPE', 'd_model': 512, 'dropout': 0.1, 'max_len': 5000}}}}, 'dataset': {'name': 'Opus100Dataset', 'train_path': './data/datasets/opus-100/train/train-00000-of-00001.parquet', 'test_path': './data/datasets/opus-100/test/test-00000-of-00001.parquet', 'source_lang': 'en', 'target_lang': 'zh', 'tokenizer_path': './data/pretrained_models/bert-base-multilingual-cased', 'max_samples': -1, 'seq_len': 64, 'batch_size': 96, 'num_workers': 8}, 'optimizer': {'name': 'AdamW', 'params': {'lr': 0.0005, 'weight_decay': 0.0001, 'betas': [0.9, 0.98], 'eps': 1e-09}}, 'criterion': {'name': 'CrossEntropyLoss', 'params': {'label_smoothing': 0.1}}, 'logger': {'enable': True, 'project': 'hydra-style-transformer', 'entity': None, 'name': 'experiment_v4', 'group': None, 'tags': ['opus', 'transformer'], 'notes': 'add temperature and topk, fix the mask bug on decoder', 'mode': 'online'}, 'callback': {'ckpt': {'name': 'CheckpointCallback', 'params': {'save_every': 1, 'keep_last': True}}, 'early_stop': {'name': 'EarlyStopping', 'params': {'patience': 3, 'min_delta': 0.001}}, 'training_monitor': {'name': 'TrainingMonitor', 'params': {'log_every_n_steps': 1000}}, 'translation_monitor': {'name': 'TranslationMonitor', 'params': {'num_samples': 10}}}, 'scheduler': {'name': 'OneCycleLR', 'params': {'max_lr': 0.001, 'total_steps': 208340, 'pct_start': 0.3, 'div_factor': 25, 'final_div_factor': 10000}}, '_wandb': {}}
+2025-12-05 13:03:26,316 INFO    MainThread:1690151 [wandb_init.py:init():888] starting backend
+2025-12-05 13:03:26,682 INFO    MainThread:1690151 [wandb_init.py:init():891] sending inform_init request
+2025-12-05 13:03:26,774 INFO    MainThread:1690151 [wandb_init.py:init():899] backend started and connected
+2025-12-05 13:03:26,781 INFO    MainThread:1690151 [wandb_init.py:init():969] updated telemetry
+2025-12-05 13:03:26,863 INFO    MainThread:1690151 [wandb_init.py:init():993] communicating run to backend with 90.0 second timeout
+2025-12-05 13:03:28,328 INFO    MainThread:1690151 [wandb_init.py:init():1040] starting run threads in backend
+2025-12-05 13:03:28,592 INFO    MainThread:1690151 [wandb_run.py:_console_start():2504] atexit reg
+2025-12-05 13:03:28,593 INFO    MainThread:1690151 [wandb_run.py:_redirect():2352] redirect: wrap_raw
+2025-12-05 13:03:28,593 INFO    MainThread:1690151 [wandb_run.py:_redirect():2421] Wrapping output streams.
+2025-12-05 13:03:28,593 INFO    MainThread:1690151 [wandb_run.py:_redirect():2444] Redirects installed.
+2025-12-05 13:03:28,598 INFO    MainThread:1690151 [wandb_init.py:init():1080] run started, returning control to user process
+2025-12-05 13:13:14,929 INFO    wandb-AsyncioManager-main:1690151 [service_client.py:_forward_responses():80] Reached EOF.
+2025-12-05 13:13:14,930 INFO    wandb-AsyncioManager-main:1690151 [mailbox.py:close():137] Closing mailbox, abandoning 1 handles.
+2025-12-05 13:13:16,775 ERROR   wandb-AsyncioManager-main:1690151 [asyncio_manager.py:fn_wrap_exceptions():183] Uncaught exception in run_soon callback.
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/wandb/sdk/lib/asyncio_manager.py", line 181, in fn_wrap_exceptions
+    await fn()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/wandb/sdk/lib/service/service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/wandb/sdk/lib/service/service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/asyncio/streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/asyncio/streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost

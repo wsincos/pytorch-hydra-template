@@ -4,3 +4,71 @@
 {"time":"2025-12-02T13:48:32.592000473+08:00","level":"INFO","msg":"stream: started","id":"sp62nqc8"}
 {"time":"2025-12-02T13:48:32.59329209+08:00","level":"INFO","msg":"sender: started","stream_id":"sp62nqc8"}
 {"time":"2025-12-02T13:48:32.593320603+08:00","level":"INFO","msg":"writer: started","stream_id":"sp62nqc8"}
+{"time":"2025-12-02T14:42:06.394543555+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":10001}
+{"time":"2025-12-02T14:42:06.395015322+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":0,"current":10001}
+{"time":"2025-12-02T15:27:34.543664724+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/wsincos1025/hydra-style-transformer/sp62nqc8/file_stream\": unexpected EOF"}
+{"time":"2025-12-02T15:35:38.151788008+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":20001}
+{"time":"2025-12-02T15:35:38.152144282+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":1,"current":20001}
+{"time":"2025-12-02T15:35:38.196211487+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":956}
+{"time":"2025-12-02T15:35:38.617427092+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":9}
+{"time":"2025-12-02T16:28:39.773259804+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":2,"current":30001}
+{"time":"2025-12-02T16:28:39.773582933+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":2,"current":30001}
+{"time":"2025-12-02T17:21:52.231855846+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":3,"current":40001}
+{"time":"2025-12-02T17:21:52.232104982+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":3,"current":40001}
+{"time":"2025-12-02T17:21:52.260346403+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":1909}
+{"time":"2025-12-02T17:21:52.707283536+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":8}
+{"time":"2025-12-02T18:15:18.847941593+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":4,"current":50001}
+{"time":"2025-12-02T18:15:18.848810449+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":4,"current":50001}
+{"time":"2025-12-02T19:09:14.532274429+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":5,"current":60001}
+{"time":"2025-12-02T19:09:14.533068216+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":5,"current":60001}
+{"time":"2025-12-02T20:02:55.307003753+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":6,"current":70001}
+{"time":"2025-12-02T20:02:55.307447331+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":6,"current":70001}
+{"time":"2025-12-02T20:02:55.370502003+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3354}
+{"time":"2025-12-02T20:02:55.802053263+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":8}
+{"time":"2025-12-02T20:56:49.316780369+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":7,"current":80001}
+{"time":"2025-12-02T20:56:49.317421469+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":7,"current":80001}
+{"time":"2025-12-02T20:56:49.370460716+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":3838}
+{"time":"2025-12-02T20:56:49.815158256+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":9}
+{"time":"2025-12-02T21:50:25.38817596+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":8,"current":90001}
+{"time":"2025-12-02T21:50:25.38838319+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":8,"current":90001}
+{"time":"2025-12-02T21:56:16.810482867+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/wsincos1025/hydra-style-transformer/sp62nqc8/file_stream\": unexpected EOF"}
+{"time":"2025-12-02T22:30:02.914278898+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/wsincos1025/hydra-style-transformer/sp62nqc8/file_stream\": read tcp 10.208.40.40:46386->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-12-02T22:43:56.793002756+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":9,"current":100001}
+{"time":"2025-12-02T22:43:56.793225242+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":9,"current":100001}
+{"time":"2025-12-02T22:43:56.836119632+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":4798}
+{"time":"2025-12-02T22:43:57.348079094+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":8}
+{"time":"2025-12-02T23:37:37.065764614+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":10,"current":110001}
+{"time":"2025-12-02T23:37:37.066064349+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":10,"current":110001}
+{"time":"2025-12-03T00:31:06.134205188+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":11,"current":120001}
+{"time":"2025-12-03T00:31:06.134474044+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":11,"current":120001}
+{"time":"2025-12-03T01:24:35.155742661+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":12,"current":130001}
+{"time":"2025-12-03T01:24:35.156045774+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":12,"current":130001}
+{"time":"2025-12-03T02:17:47.266274968+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":13,"current":140001}
+{"time":"2025-12-03T02:17:47.285135967+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":13,"current":140001}
+{"time":"2025-12-03T02:17:47.331352466+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":6715}
+{"time":"2025-12-03T02:17:47.790459961+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":8}
+{"time":"2025-12-03T03:10:54.402243924+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":14,"current":150001}
+{"time":"2025-12-03T03:10:54.404681321+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":14,"current":150001}
+{"time":"2025-12-03T04:04:00.118175031+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":15,"current":160001}
+{"time":"2025-12-03T04:04:00.118607388+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":15,"current":160001}
+{"time":"2025-12-03T04:04:00.157814468+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":7667}
+{"time":"2025-12-03T04:04:00.660315732+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":8}
+{"time":"2025-12-03T04:57:20.206377227+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":16,"current":170001}
+{"time":"2025-12-03T04:57:20.206724024+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":16,"current":170001}
+{"time":"2025-12-03T04:57:20.23666854+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":8147}
+{"time":"2025-12-03T04:57:20.647011921+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":9}
+{"time":"2025-12-03T05:50:28.700656677+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":17,"current":180001}
+{"time":"2025-12-03T05:50:28.701022514+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":17,"current":180001}
+{"time":"2025-12-03T06:44:07.973420143+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":18,"current":190001}
+{"time":"2025-12-03T06:44:07.973929729+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":18,"current":190001}
+{"time":"2025-12-03T07:14:00.859295405+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-12-03T07:30:49.825517947+08:00","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/wsincos1025/hydra-style-transformer/sp62nqc8/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-12-03T07:37:46.226769331+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":19,"current":200001}
+{"time":"2025-12-03T07:37:46.227480012+08:00","level":"WARN","msg":"handler: ignoring partial history record","step":19,"current":200001}
+{"time":"2025-12-03T07:37:46.275464339+08:00","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":9585}
+{"time":"2025-12-03T07:37:46.664500668+08:00","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":8}
+{"time":"2025-12-03T07:37:50.221731426+08:00","level":"INFO","msg":"stream: closing","id":"sp62nqc8"}
+{"time":"2025-12-03T07:37:53.065001623+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-12-03T07:37:53.966582242+08:00","level":"INFO","msg":"handler: closed","stream_id":"sp62nqc8"}
+{"time":"2025-12-03T07:37:53.966718795+08:00","level":"INFO","msg":"sender: closed","stream_id":"sp62nqc8"}
+{"time":"2025-12-03T07:37:53.966734743+08:00","level":"INFO","msg":"stream: closed","id":"sp62nqc8"}

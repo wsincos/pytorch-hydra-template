@@ -87,3 +87,4 @@ def register_standard_components():
     SCHEDULER_REGISTRY.register("StepLR")(optim.lr_scheduler.StepLR) # 学习率调度器
     SCHEDULER_REGISTRY.register("ReduceLROnPlateau")(optim.lr_scheduler.ReduceLROnPlateau) # 动态调整学习率
     SCHEDULER_REGISTRY.register("CosineAnnealingLR")(optim.lr_scheduler.CosineAnnealingLR) # 余弦退火的方式调整学习率
+    SCHEDULER_REGISTRY.register("OneCycleLR")(optim.lr_scheduler.OneCycleLR) # One Cycle 学习率调度器

@@ -1,0 +1,62 @@
+[src.solver] - Start Training... Total Epochs: 20
+[src.callbacks.training_monitor] - Epoch 0, Step 1000: loss = 6.1878
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 40, in <module>
+    main()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 37, in main
+    solver.train()
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 237, in train
+    loss = self.run_step(x, y)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 193, in run_step
+    loss = self.criterion(logits.reshape(-1, logits.shape[-1]), tgt_label.reshape(-1))
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 1174, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/functional.py", line 3029, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 40, in <module>
+    main()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 37, in main
+    solver.train()
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 237, in train
+    loss = self.run_step(x, y)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 193, in run_step
+    loss = self.criterion(logits.reshape(-1, logits.shape[-1]), tgt_label.reshape(-1))
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/loss.py", line 1174, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/functional.py", line 3029, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+KeyboardInterrupt
