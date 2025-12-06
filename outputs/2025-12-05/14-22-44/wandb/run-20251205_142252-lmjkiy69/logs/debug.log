@@ -19,3 +19,5 @@ config: {'train': {'seed': 42, 'device': 'cuda', 'epochs': 50, 'use_amp': True},
 2025-12-05 14:22:55,280 INFO    MainThread:1930027 [wandb_run.py:_redirect():2421] Wrapping output streams.
 2025-12-05 14:22:55,280 INFO    MainThread:1930027 [wandb_run.py:_redirect():2444] Redirects installed.
 2025-12-05 14:22:55,286 INFO    MainThread:1930027 [wandb_init.py:init():1080] run started, returning control to user process
+2025-12-05 14:53:36,746 INFO    wandb-AsyncioManager-main:1930027 [service_client.py:_forward_responses():80] Reached EOF.
+2025-12-05 14:53:36,746 INFO    wandb-AsyncioManager-main:1930027 [mailbox.py:close():137] Closing mailbox, abandoning 1 handles.

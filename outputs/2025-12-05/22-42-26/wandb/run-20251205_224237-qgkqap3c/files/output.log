@@ -1,0 +1,57 @@
+[src.solver] - Start Training... Total Epochs: 50
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 40, in <module>
+    main()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 37, in main
+    solver.train()
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 265, in train
+    loss = self.run_step(x, y)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 218, in run_step
+    self.scaler.scale(loss).backward()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 40, in <module>
+    main()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 37, in main
+    solver.train()
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 265, in train
+    loss = self.run_step(x, y)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 218, in run_step
+    self.scaler.scale(loss).backward()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

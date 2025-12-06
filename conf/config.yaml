@@ -11,8 +11,8 @@ defaults:
 train:
   seed: 42
   device: cuda             # 环境支持 CUDA，直接用显卡跑
-  epochs: 20               # 15-20轮即可
-  use_amp: false            # 使用混合精度训练
+  epochs: 30               # 15-20轮即可
+  use_amp: true            # 使用混合精度训练
 
 
 checkpoint:
@@ -22,7 +22,7 @@ checkpoint:
 
 hydra:
   job:
-      chdir: false        # 不改变工作目录，保持在运行脚本的目录
+    chdir: false        # 不改变工作目录，保持在运行脚本的目录
   job_logging:
     formatters:
       simple:

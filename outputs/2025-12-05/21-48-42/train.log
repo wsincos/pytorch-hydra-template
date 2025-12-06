@@ -1,0 +1,181 @@
+[__main__] - ====== Configuration ======
+[__main__] - 
+train:
+  seed: 42
+  device: cuda
+  epochs: 50
+  use_amp: true
+checkpoint:
+  enabled: true
+  save_dir: checkpoints
+model:
+  name: seq2seq_transformer
+  wrapper:
+    name: Seq2SeqWrapper
+  shared:
+    src_vocab_size: 21128
+    tgt_vocab_size: 21128
+    d_model: 512
+    pe_cfg:
+      name: SinusoidalPE
+      d_model: 512
+      dropout: 0.1
+      max_len: 5000
+  arch:
+    encoder:
+      name: TransformerEncoder
+      input_dim: 21128
+      d_model: 512
+      dim_feedforward: null
+      nhead: 8
+      num_layers: 6
+      pe_cfg:
+        name: SinusoidalPE
+        d_model: 512
+        dropout: 0.1
+        max_len: 5000
+    decoder:
+      name: TransformerDecoder
+      output_dim: 21128
+      d_model: 512
+      dim_feedforward: null
+      nhead: 8
+      num_layers: 6
+      pe_cfg:
+        name: SinusoidalPE
+        d_model: 512
+        dropout: 0.1
+        max_len: 5000
+dataset:
+  name: Opus100Dataset
+  train_path: ./data/datasets/opus-100/train/train-00000-of-00001.parquet
+  test_path: ./data/datasets/opus-100/test/test-00000-of-00001.parquet
+  source_lang: en
+  target_lang: zh
+  tokenizer_path: ./data/pretrained_models/bert-base-multilingual-cased
+  max_samples: -1
+  seq_len: 64
+  batch_size: 128
+  num_workers: 8
+optimizer:
+  name: AdamW
+  params:
+    lr: 0.0005
+    weight_decay: 0.0001
+    betas:
+    - 0.9
+    - 0.98
+    eps: 1.0e-09
+criterion:
+  name: CrossEntropyLoss
+  params:
+    label_smoothing: 0.1
+logger:
+  enable: true
+  project: hydra-style-transformer
+  entity: null
+  name: experiment_v0
+  group: null
+  tags:
+  - opus
+  - transformer
+  notes: adjust batch size
+  mode: online
+callback:
+  ckpt:
+    name: CheckpointCallback
+    params:
+      save_every: 1
+      keep_last: true
+  early_stop:
+    name: EarlyStopping
+    params:
+      patience: 3
+      min_delta: 0.001
+  training_monitor:
+    name: TrainingMonitor
+    params:
+      log_every_n_steps: 1000
+  translation_monitor:
+    name: TranslationMonitor
+    params:
+      num_samples: 10
+scheduler:
+  name: OneCycleLR
+  params:
+    max_lr: 0.001
+    total_steps: 100000
+    pct_start: 0.3
+    div_factor: 25
+    final_div_factor: 10000
+
+[__main__] - ===========================
+[__main__] - Initializing Solver with GPU: 7
+[src.solver] - Mixed Precision Training (AMP) enabled.
+[src.solver] - Building Loader...
+[src.data.datasets] - [Data] Loading local parquet file: ./data/datasets/opus-100/train/train-00000-of-00001.parquet...
+[src.data.datasets] - [Data] Loading Tokenizer from: ./data/pretrained_models/bert-base-multilingual-cased...
+[src.data.datasets] - [Data] Loading local parquet file: ./data/datasets/opus-100/test/test-00000-of-00001.parquet...
+[src.solver] - Auto-setting vocab size from Tokenizer: 119547
+[src.solver] - Building Model: seq2seq_transformer
+[src.models.builders] - [Builder] Instantiating Encoder: TransformerEncoder
+[src.models.builders] - [Builder] Instantiating Decoder: TransformerDecoder
+[src.models.builders] - [Builder] Instantiating Model: Seq2SeqWrapper
+[src.solver] - Building Callback: ckpt (CheckpointCallback)
+[src.callbacks.checkpoint] - [Callback] Checkpoints will be saved to: /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-05/21-48-42/checkpoints
+[src.solver] - Building Callback: early_stop (EarlyStopping)
+[src.solver] - Building Callback: training_monitor (TrainingMonitor)
+[src.solver] - Building Callback: translation_monitor (TranslationMonitor)
+[src.solver] - Start Training... Total Epochs: 50
+[src.callbacks.training_monitor] - Epoch 0, Step 1000: loss = 6.0356
+[src.callbacks.training_monitor] - Epoch 0, Step 2000: loss = 5.5188
+[src.callbacks.training_monitor] - Epoch 0, Step 3000: loss = 5.0326
+[src.callbacks.training_monitor] - Epoch 0, Step 4000: loss = 4.9889
+[src.callbacks.training_monitor] - Epoch 0, Step 5000: loss = 4.8715
+[src.callbacks.training_monitor] - Epoch 0, Step 6000: loss = 4.6332
+[src.callbacks.training_monitor] - Epoch 0, Step 7000: loss = 4.8143
+[src.callbacks.checkpoint] - New Best Model! Loss: inf -> 4.4515
+[src.callbacks.checkpoint] - Saved BEST model to /data1/jinyu_wang/projects/pytorch-hydra/outputs/2025-12-05/21-48-42/checkpoints/checkpoint_best.pt
+[src.callbacks.training_monitor] - === Epoch 0 Done | Train Loss: 5.3194 ===
+[src.callbacks.generation_monitor] - --- [Translation Demo] ---
+[src.callbacks.generation_monitor] - Fixed 10 validation samples for monitoring.
+[src.callbacks.generation_monitor] - Src : C. Draft resolution A / C. 3 / 57 / L. 25 and Rev. 1 and amendment contained in document A / C. 3 / 57 / L. 72
+[src.callbacks.generation_monitor] - Tgt : C.决议草案A/C.3/57/L.25和Rev.1以及文件A/C.3/57/L.72所载修正案
+[src.callbacks.generation_monitor] - Pred: A.决定草案A/C.1/L.4和S/L.4的决定以及通过的决议和文件。
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : ( a ) Complete rotor assemblies :
+[src.callbacks.generation_monitor] - Tgt : 甲替硝基苯胺(MNA;PNMA)
+[src.callbacks.generation_monitor] - Pred: (a)通过议题(d)：
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : 8. 1 The Committee has considered this communication in the light of all the information made available to it by the parties, as required by article 5, paragraph 1, of the Optional Protocol.
+[src.callbacks.generation_monitor] - Tgt : 8.1人权事务委员会根据当事各方依《任择议定书》第五条第1款规定提交的一切现有资料审议了来文。
+[src.callbacks.generation_monitor] - Pred: 2.委员会注意到，在第3条第1条第1款中所载的缔约国应该在其第二十三届会议上通过的《公约》中采取的行动。
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : • African Union Commissioner for Peace and Security, Ambassador Said Djinnit, and the Special Representative of the African Union ( AU ) in Burundi, Ambassador Mamadou Bah
+[src.callbacks.generation_monitor] - Tgt : •非洲联盟和平与安全专员SaidDjinnit大使和非洲联盟驻布隆迪特别代表马马杜·巴大使
+[src.callbacks.generation_monitor] - Pred: 联塞特派团（特派团和非洲联盟）、特别会员国和联盟特派团（以及伊拉克）非政治和民众国的非常驻代表团
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Yeah, some of you are like, " He means yogurt. "
+[src.callbacks.generation_monitor] - Tgt : 是的，有些人是喜欢，"他的意思是酸奶。"
+[src.callbacks.generation_monitor] - Pred: 他是个小子
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : I have made a great decision. I ' ve decided to get married.
+[src.callbacks.generation_monitor] - Tgt : 我作了伟大的决定，我要结婚了
+[src.callbacks.generation_monitor] - Pred: 我决定决定这个决定。
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Where age structure is concerned, most unemployed persons were found in the 25 - 39 ( 42. 6 % ) and 40 - 54 ( 27. 6 % ) age groups, representing a total of 172, 400 persons, while young people in the 15 - 24 age group accounted for 24.
+[src.callbacks.generation_monitor] - Tgt : 就年龄结构而言，大多数失业人口在25-39岁年龄组(42.6%)和40-54岁年龄组(27.6%)，总数为172,400人，而在15-24岁年龄组的
+[src.callbacks.generation_monitor] - Pred: 在这些方面，妇女的儿童（人口基金会）（人口）（在其中，在一百万女）上升，在其家庭中有5％的人数据比以及在5岁的儿童和儿童的女
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : The only defence against a nuclear catastrophe is the total elimination of those weapons.
+[src.callbacks.generation_monitor] - Tgt : 防范核灾难的唯一途径就是彻底销毁这些武器。
+[src.callbacks.generation_monitor] - Pred: 这些武装武器对核武器的军备核武器的核武器的影响。
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Number 24, also from Kaltenbach,
+[src.callbacks.generation_monitor] - Tgt : 同样是来自卡尔特巴赫马场的：
+[src.callbacks.generation_monitor] - Pred: 还有一次，还有四个小组，包括一个非政府组织（或）的地方）。
+[src.callbacks.generation_monitor] - --------------------
+[src.callbacks.generation_monitor] - Src : Part II of the final outcome document containing the review and assessment of the implementation of the Copenhagen Declaration and Programme of Action of the Summit acknowledges that Member States have taken a number of actions to enhance their capacities to achieve goals of the World Summit for Social Development.
+[src.callbacks.generation_monitor] - Tgt : 18．最后结果文件第二部分审查和评估了执行首脑会议《哥本哈根宣言和行动纲领》的情况。该文件确认，会员国已采取各种行动加强实现社
+[src.callbacks.generation_monitor] - Pred: 5.决定将题为《世界贸易和经济及社会事务部和发展问题世界银行的《行动纲要》，以及《公约》的报告中的《公约》的执行情况，以及执行
+[src.callbacks.generation_monitor] - --------------------

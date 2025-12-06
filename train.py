@@ -12,6 +12,9 @@ logger = logging.getLogger(__name__)
 if 'CUDA_VISIBLE_DEVICES' not in os.environ:
     os.environ['CUDA_VISIBLE_DEVICES'] = '7'
 
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:128"
+
+
 # 在 import 任何 huggingface 库之前设置这个
 # "false" 表示禁用 Tokenizers 的内部多线程，只依赖 DataLoader 的多进程
 # 这样不仅消除了警告，通常还能减少 CPU 争抢，让训练更稳定

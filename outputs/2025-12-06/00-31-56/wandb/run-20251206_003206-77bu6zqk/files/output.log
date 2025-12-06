@@ -1,0 +1,93 @@
+[src.solver] - Start Training... Total Epochs: 50
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 40, in <module>
+    main()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 37, in main
+    solver.train()
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 265, in train
+    loss = self.run_step(x, y)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 210, in run_step
+    logits = self.model(x, tgt_input)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/models/modules/wrappers.py", line 14, in forward
+    output = self.decoder(tgt, memory)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/models/modules/decoders.py", line 48, in forward
+    out = self.model(tgt, memory, tgt_mask=tgt_mask)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/transformer.py", line 369, in forward
+    output = mod(output, memory, tgt_mask=tgt_mask,
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/transformer.py", line 718, in forward
+    x = self.norm3(x + self._ff_block(x))
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/transformer.py", line 744, in _ff_block
+    x = self.linear2(self.dropout(self.activation(self.linear1(x))))
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 40, in <module>
+    main()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/train.py", line 37, in main
+    solver.train()
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 265, in train
+    loss = self.run_step(x, y)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/solver.py", line 210, in run_step
+    logits = self.model(x, tgt_input)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/models/modules/wrappers.py", line 14, in forward
+    output = self.decoder(tgt, memory)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/projects/pytorch-hydra/src/models/modules/decoders.py", line 48, in forward
+    out = self.model(tgt, memory, tgt_mask=tgt_mask)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/transformer.py", line 369, in forward
+    output = mod(output, memory, tgt_mask=tgt_mask,
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/transformer.py", line 718, in forward
+    x = self.norm3(x + self._ff_block(x))
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/transformer.py", line 744, in _ff_block
+    x = self.linear2(self.dropout(self.activation(self.linear1(x))))
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/jinyu_wang/miniconda3/envs/transformer/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt

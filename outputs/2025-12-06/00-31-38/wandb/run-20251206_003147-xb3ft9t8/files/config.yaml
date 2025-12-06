@@ -1,0 +1,138 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        m: []
+        python_version: 3.9.25
+        t:
+            "1":
+                - 1
+                - 11
+                - 49
+                - 50
+                - 51
+            "3":
+                - 13
+                - 15
+                - 16
+            "4": 3.9.25
+            "5": 0.23.0
+            "6": 4.57.3
+            "12": 0.23.0
+            "13": linux-x86_64
+callback:
+    value:
+        ckpt:
+            name: CheckpointCallback
+            params:
+                keep_last: true
+                save_every: 1
+        early_stop:
+            name: EarlyStopping
+            params:
+                min_delta: 0.001
+                patience: 3
+        training_monitor:
+            name: TrainingMonitor
+            params:
+                log_every_n_steps: 1000
+        translation_monitor:
+            name: TranslationMonitor
+            params:
+                num_samples: 10
+checkpoint:
+    value:
+        enabled: true
+        save_dir: checkpoints
+criterion:
+    value:
+        name: CrossEntropyLoss
+        params:
+            label_smoothing: 0.1
+dataset:
+    value:
+        batch_size: 110
+        max_samples: -1
+        name: Opus100Dataset
+        num_workers: 8
+        seq_len: 64
+        source_lang: en
+        target_lang: zh
+        test_path: ./data/datasets/opus-100/test/test-00000-of-00001.parquet
+        tokenizer_path: ./data/pretrained_models/bert-base-multilingual-cased
+        train_path: ./data/datasets/opus-100/train/train-00000-of-00001.parquet
+logger:
+    value:
+        enable: true
+        entity: null
+        group: null
+        mode: online
+        name: experiment_v7
+        notes: empty cache after infer
+        project: hydra-style-transformer
+        tags:
+            - opus
+            - transformer
+model:
+    value:
+        arch:
+            decoder:
+                d_model: 512
+                dim_feedforward: null
+                name: TransformerDecoder
+                nhead: 8
+                num_layers: 6
+                output_dim: 119547
+                pe_cfg:
+                    d_model: 512
+                    dropout: 0.1
+                    max_len: 5000
+                    name: SinusoidalPE
+            encoder:
+                d_model: 512
+                dim_feedforward: null
+                input_dim: 119547
+                name: TransformerEncoder
+                nhead: 8
+                num_layers: 6
+                pe_cfg:
+                    d_model: 512
+                    dropout: 0.1
+                    max_len: 5000
+                    name: SinusoidalPE
+        name: seq2seq_transformer
+        shared:
+            d_model: 512
+            pe_cfg:
+                d_model: 512
+                dropout: 0.1
+                max_len: 5000
+                name: SinusoidalPE
+            src_vocab_size: 119547
+            tgt_vocab_size: 119547
+        wrapper:
+            name: Seq2SeqWrapper
+optimizer:
+    value:
+        name: AdamW
+        params:
+            betas:
+                - 0.9
+                - 0.98
+            eps: 1e-09
+            lr: 0.0005
+            weight_decay: 0.0001
+scheduler:
+    value:
+        name: OneCycleLR
+        params:
+            div_factor: 25
+            final_div_factor: 10000
+            max_lr: 0.001
+            pct_start: 0.3
+            total_steps: 454550
+train:
+    value:
+        device: cuda
+        epochs: 50
+        seed: 42
+        use_amp: true

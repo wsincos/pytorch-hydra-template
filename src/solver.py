@@ -178,17 +178,19 @@ class Solver:
         src_tensor = torch.tensor(inputs['input_ids']).to(self.device) # [Batch, SeqLen]
         
         # 3. 调用模型的底层 generate
-        generated_ids = self.model.generate(
-            src_tensor, 
-            bos_token_id=bos_id, 
-            eos_token_id=eos_id,
-            max_len=64
-        )
+        with autocast(enabled=self.use_amp):
+            generated_ids = self.model.generate(
+                src_tensor, 
+                bos_token_id=bos_id, 
+                eos_token_id=eos_id,
+                max_len=64
+            )
         
         # 4. Tensor -> 文本 (Batch Decoding)
         # skip_special_tokens=True 会自动去掉 [CLS], [SEP], [PAD]
         decoded_preds = tokenizer.batch_decode(generated_ids.tolist(), skip_special_tokens=True)
-        
+
+
         self.model.train()
         return decoded_preds
             
@@ -268,6 +270,7 @@ class Solver:
                     self.scheduler.step()
                     # 触发 Monitor 记录 LR (变成 Step 级记录，曲线更平滑)
                     self.trigger_callbacks("on_scheduler_step")
+                
             
             avg_train_loss = total_loss / len(self.train_loader)
             self.train_loss = avg_train_loss
@@ -278,6 +281,9 @@ class Solver:
             
             # --- 评估 ---
             self.evaluate() # 内部更新了 self.test_loss
+
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
             
             
             # --- 触发 Epoch 结束回调 ---
